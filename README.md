@@ -13,17 +13,17 @@ There are tutorials, tips & examples on how to use LaTeX provided in the downloa
 
 Download the latest version of utmthesis (both in LaTeX and LyX) here! Due to upload limitation imposed by Google, we could not upload new updates here. Temporarily, we provide download links from FKE Postgraduate Website while we are trying to resolve the upload restriction here.
 
-# Versions
+## Versions
 Current stable release: version 3.13
 
-# Required Software
+## Required Software
 1.  A good LaTeX compiler.  For Windows users, you may try MikTeX or ProTeXt. For Linux users, install TeX Live. Note: If you install a minimal/basic version of a Latex compiler, you will face problems. Go for the full download.  For Ubuntu (or Debian based distros) type the following command in your shell to auto-magically install all the above software like a boss:
 
     sudo apt-get install texlive-full texmaker jabref
 
 2.  A text editor (an advance Notepad) such as TeXstudio or Texmaker or you may try LyX which is extremely user-friendly and provides a WYSWYG-like interface (What You See is What You Get).
 
-# Thesis Printing Guide
+## Thesis Printing Guide
 To guarantee that your thesis is properly printed, ensure that the following settings are set in your printer job options:
 
 Paper type : A4 (The paper used for the thesis is A4. Sometimes this is incorrectly set at the printer itself.)
