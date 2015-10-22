@@ -1,4 +1,7 @@
-# The LaTeX class for Universiti Teknologi Malaysia (UTM) thesis.  
+# utmthesis
+The LaTeX class for Universiti Teknologi Malaysia (UTM) thesis.  
+
+# Description
 
 The utmthesis Project provides and maintains a LaTeX class, BibTeX styles (for both authordate and number citation styles) as well as a LyX layout to typeset your thesis according to the Universiti Teknologi Malaysia (UTM) thesis formatting rules. It is currently the most time saving and efficient way to write a UTM compliant thesis.  
 
