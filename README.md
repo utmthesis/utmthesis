@@ -31,3 +31,11 @@ Page Scaling : None (It is a common mistake to select "Fit to printable area", o
 Scale : 100% (This causes the page to zoom in/out. Leave it at 100%.)
 Failing to set these printer job options will result in a printout that is out of scale/margin.
 
+## Bugs/Issues
+If you have any basic problems or need help, please discuss it at utmthesis-discuss:
+http://groups.google.com/group/utmthesis-discuss
+
+If you have found any legitimate bugs or issues, please report at "Issues" located at the right-side of this GitHub repository. We will take a look at the problem and try to fix it if possible. However, this is not the place to ask for help, use utmthesis-discuss for that.
+
+Please also report broken links on this homepage and anything else that is inconsistent.
+
