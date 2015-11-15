@@ -11,7 +11,7 @@ Even though you just spent 1-2 days writing the content of your thesis (because 
 
 There are tutorials, tips & examples on how to use LaTeX provided in the downloads and wiki section.
 
-Download the latest version of utmthesis (both in LaTeX and LyX) here! Due to upload limitation imposed by Google, we could not upload new updates here. Temporarily, we provide download links from FKE Postgraduate Website while we are trying to resolve the upload restriction here.
+Download the latest version of utmthesis (both in LaTeX and LyX) here! 
 
 ## Versions
 Current stable release: version 4.00
