@@ -14,7 +14,7 @@ There are tutorials, tips & examples on how to use LaTeX provided in the downloa
 Download the latest version of utmthesis (both in LaTeX and LyX) here! Due to upload limitation imposed by Google, we could not upload new updates here. Temporarily, we provide download links from FKE Postgraduate Website while we are trying to resolve the upload restriction here.
 
 ## Versions
-Current stable release: version 3.13
+Current stable release: version 4.00
 
 ## Required Software
 1.  A good LaTeX compiler.  For Windows users, you may try MikTeX or ProTeXt. For Linux users, install TeX Live. Note: If you install a minimal/basic version of a Latex compiler, you will face problems. Go for the full download.  For Ubuntu (or Debian based distros) type the following command in your shell to auto-magically install all the above software like a boss:
