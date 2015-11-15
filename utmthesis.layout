@@ -1,0 +1,462 @@
+#% Do not delete the line below; configure depends on this
+#  \DeclareLaTeXClass[utmthesis]{book (UTM Thesis)}
+ 
+# Input general definitions
+Input stdcounters.inc
+Input stdfloats.inc
+Input stdlists.inc
+Input stdsections.inc
+Input stdstarsections.inc
+#Input stdinsets.inc
+#Input stdciteformats.inc
+
+Format 35
+
+Sides          1
+SecNumDepth    3
+TocDepth       3
+DefaultStyle   Standard
+
+NoStyle Part
+NoCounter part
+NoStyle Part*
+NoStyle Labeling
+NoCounter labeling
+
+# This is just to show how to declare the default font.
+# The defaults are exactly those shown here.
+DefaultFont
+  Family        Roman
+  Series        Medium
+  Shape         Up
+  Size          Normal
+  Color         None
+EndFont
+
+Style Standard
+  Margin        Static
+  LatexType     Paragraph
+  LatexName     dummy
+  ParIndent     MM
+  ParSkip       0.4
+  Align         Block
+  AlignPossible Block, Left, Right, Center
+  LabelType     No_Label
+End
+
+Style 1a:_Title
+  Margin        Static
+  LatexType     Command
+  LatexName     title
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<1(a): Title:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 1b:_Title_2_(optional)
+  Margin        Static
+  LatexType     Command
+  LatexName     titletwo
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<1(b): Title 2 (opt):>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 1c:_Title_3_(optional)
+  Margin        Static
+  LatexType     Command
+  LatexName     titlethree
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<1(c): Title 3 (opt):>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 2:_Author
+  Margin        Static
+  LatexType     Command
+  LatexName     author
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<2: Author:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 3:_Degree
+  Margin        Static
+  LatexType     Command
+  LatexName     degree
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<3: Degree:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 4:_Faculty
+  Margin        Static
+  LatexType     Command
+  LatexName     faculty
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<4: Faculty:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 5:_Thesis_Date
+  Margin        Static
+  LatexType     Command
+  LatexName     titledate
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<5: Thesis Date:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 6:_Award
+  Margin        Static
+  LatexType     Command
+  LatexName     award
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<6: Award:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 7a:_1st_Supervisor
+  Margin        Static
+  LatexType     Command
+  LatexName     superone
+  Category      FrontMatter
+  Align			Center
+  TopSep		    1.5
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<7(a): 1st Supervisor:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 7b:_2nd_Supervisor
+  Margin        Static
+  LatexType     Command
+  LatexName     supertwo
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<7(b): 2nd Supervisor:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 7c:_3rd_Supervisor
+  Margin        Static
+  LatexType     Command
+  LatexName     superthree
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<7(c): 3rd Supervisor:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 7c:_4th_Supervisor
+  Margin        Static
+  LatexType     Command
+  LatexName     superfour
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<7(d): 4th Supervisor:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 7c:_5th_Supervisor
+  Margin        Static
+  LatexType     Command
+  LatexName     superfive
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<7(c): 5th Supervisor:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 8:_Coverpage
+  Margin        Static
+  LatexType     Command
+  LatexName     coverpage 
+  Category      FrontMatter
+  Align			Center
+  BottomSep     0.5
+  LabelType		static
+  LabelString	"<8: Coverpage>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 9:_Supervisor_Page
+  Margin        Static
+  LatexType     Command
+  LatexName     superpage 
+  Category      FrontMatter
+  Align			Center
+  BottomSep     0.5
+  LabelType		static
+  LabelString	"<9: Supervisor Page>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 10:_Student_Certification
+  Margin        Static
+  LatexType     Command
+  LatexName     certification
+  Align			Center
+  Category      FrontMatter
+  BottomSep     0.5
+  LabelType		static
+  LabelString	"<10: Student Certification>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 11:_Frontmatter
+  Margin        Static
+  LatexType     Command
+  LatexName     frontmatter 
+  Category      FrontMatter
+  Align			Center
+  BottomSep     0.5
+  LabelType		static
+  LabelString	"<11: Front Matter>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 12:_Maketitle
+  Margin        Static
+  LatexType     Command
+  LatexName     maketitle
+  Align			Center
+  Category      FrontMatter
+  BottomSep     1.5
+  LabelType		static
+  LabelString	"<12: Maketitle>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 13:_Declaration
+  Margin        Static
+  LatexType     Command
+  LatexName     declaration
+  Category      FrontMatter
+  Align			Center
+  BottomSep     0.5
+  LabelType		static
+  LabelString	"<13: Declaration>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 14:_Dedication
+  LatexType     Environment
+  LatexName     dedication
+  Category      FrontMatter
+  Align			Block
+  TopSep        1.5
+  BottomSep     1.5
+  LabelType     Centered_Top_Environment
+  LabelString   "<14: DEDICATION>"
+  LabelFont
+    Series	    Bold
+  EndFont
+End
+
+Style 15:_Acknowledgement
+  LatexType     Environment
+  LatexName     acknowledgement
+  Category      FrontMatter
+  Align			Block
+  BottomSep     1.5
+  LabelType     Centered_Top_Environment
+  LabelString   "<15: ACKNOWLEDGEMENT>"
+  LabelFont
+    Series	    Bold
+  EndFont
+End
+
+Style 16:_Abstract
+  LatexType     Environment
+  LatexName     abstract
+  Category      FrontMatter
+  BottomSep     1.5
+  Align			Block
+  LabelType     Centered_Top_Environment
+  LabelString   "<16: ABSTRACT (ENGLISH)>"
+  LabelFont
+    Series	    Bold
+  EndFont
+End
+
+Style 17:_Abstrak_(Malay)
+  LatexType     Environment
+  LatexName     abstrak
+  Category      FrontMatter
+  BottomSep     1.5
+  Align			Block
+  LabelType     Centered_Top_Environment
+  LabelString   "<17: ABSTRAK (MALAY)>"
+  LabelFont
+    Series	    Bold
+  EndFont
+End
+
+

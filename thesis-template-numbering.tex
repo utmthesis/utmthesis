@@ -1,0 +1,192 @@
+%% LyX 2.0.8.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[a4paper]{utmthesis}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\special{papersize=\the\paperwidth,\the\paperheight}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{url, hyperref} 
+\usepackage[final]{pdfpages}
+\usepackage[pages=some]{background}
+\usepackage[labelfont=bf]{caption}
+
+\makeatother
+
+\begin{document}
+
+\title{The Thesis Title }
+
+
+\author{The Author }
+
+
+\degree{The Degree}
+
+
+\faculty{Faculty of Electrical Engineering }
+
+
+\titledate{October 2013 }
+
+
+\award{4 }
+
+% Options for Award 
+% 1. Bachelor Degree Project Report  
+% 2. Master's Project Report (By course work)  
+% 3. Master's Dissertation (By course work and research)  
+% 4. Master's Thesis (By research)  
+% 5. Doctor of Philosophy Thesis  
+% 6. Engineering Doctorate Thesis 
+% 7. First Stage Proposal 
+
+
+\superone{M.Y. Supervisor}
+
+
+\supertwo{My Other Supervisor}
+
+
+\superthree{And Another One}
+
+
+\superfour{And Another}
+
+
+\superfive{And the Funder}
+
+% We support upto FIVE supervisors
+
+% Option to add watermark page % Comment for final version
+\backgroundsetup{scale=1,angle=0,opacity=.1,hshift=0.25in,vshift=-0.5in,contents={\includegraphics[width=5cm]{figs/utm02.jpg}}} 
+\watermarkpage
+
+% Mandatory pages 
+\coverpage
+\superpage
+\certification
+\frontmatter
+\maketitle
+\declaration
+\begin{dedication}
+Dedication\end{dedication}
+\begin{acknowledgement}
+Acknowledgement\end{acknowledgement}
+\begin{abstract}
+This is the English abstract\end{abstract}
+\begin{abstrak}
+Ini adalah abstrak Bahasa Melayu
+\end{abstrak}
+\tableofcontents
+\listoftables
+\listoffigures
+
+%List of abbreviation 
+\listofabbre
+\addabbre{XML}{Extensible Markup Language}
+
+%List of symbols 
+\listofsymbols
+\addsymbol{$\gamma$}{Whatever}
+
+%Uncomment if have appendices
+\listofappendices
+
+\mainmatter
+
+
+\chapter{Introduction}
+
+
+\section{Problem Background}
+
+Introduction to the thesis \cite{b2} to the thesis \cite{okamoto2004improved}. 
+
+
+\section{State-of-the-Arts}
+
+
+\section{Problem Statement}
+
+
+\section{Objective and Scope}
+
+
+\section{Organization}
+
+% You can call another LyX document (using identical document class) by
+% Insert -> File -> Child Document
+
+\include{ch2}
+
+
+\chapter{Research Methodology}
+
+
+\section{Top-level View}
+
+
+\section{Research Activities}
+
+
+\section{Controllables vs. Obseravables}
+
+
+\section{Techniques}
+
+
+\section{Tools and Platforms}
+
+
+\section{Chapter Summary}
+
+
+\chapter{Proposed Work}
+
+
+\section{The Big Picture}
+
+
+\section{Analytical Proofs}
+
+
+\section{Results and Discussion}
+
+
+\section{Chapter Summary}
+
+
+\chapter{Conclusion}
+
+
+\section{Research Outcomes}
+
+
+\section{Contributions to Knowledge}
+
+
+\section{Future Works}
+
+\bibliographystyle{utmthesis-numbering}
+\bibliography{reference}
+
+
+\appendix
+
+\chapter{Mathematical Proofs}
+
+
+\chapter{Pseudo-codes}
+
+
+\chapter{Time-series Results}
+
+%This is required to make List of Appendices possible. Remove when have no appendix.
+\endmatter
+\end{document}

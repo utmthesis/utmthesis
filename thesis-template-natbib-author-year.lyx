@@ -1,0 +1,595 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass utmthesis
+\begin_preamble
+\usepackage{url, hyperref} 
+\usepackage[final]{pdfpages}
+\usepackage[sort&compress,round]{natbib}
+\usepackage[pages=some]{background}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout 1a: Title
+The Thesis Title 
+\end_layout
+
+\begin_layout 2: Author
+The Author 
+\end_layout
+
+\begin_layout 3: Degree
+The Degree
+\end_layout
+
+\begin_layout 4: Faculty
+Faculty of Electrical Engineering 
+\end_layout
+
+\begin_layout 5: Thesis Date
+October 2013 
+\end_layout
+
+\begin_layout 6: Award
+4 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Options for Award 
+\end_layout
+
+\begin_layout Plain Layout
+
+% 1.
+ Bachelor Degree Project Report  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 2.
+ Master's Project Report (By course work)  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 3.
+ Master's Dissertation (By course work and research)  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 4.
+ Master's Thesis (By research)  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 5.
+ Doctor of Philosophy Thesis  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 6.
+ Engineering Doctorate Thesis 
+\end_layout
+
+\begin_layout Plain Layout
+
+% 7.
+ First Stage Proposal 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout 7a: 1st Supervisor
+M.Y.
+ Supervisor
+\end_layout
+
+\begin_layout 7b: 2nd Supervisor
+My Other Supervisor
+\end_layout
+
+\begin_layout 7c: 3rd Supervisor
+And Another One
+\end_layout
+
+\begin_layout 7c: 4th Supervisor
+And Another
+\end_layout
+
+\begin_layout 7c: 5th Supervisor
+And the Funder
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% We support upto FIVE supervisors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Option to add watermark page % Comment for final version
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+backgroundsetup{scale=1,angle=0,opacity=.1,hshift=0.25in,vshift=-0.5in,contents={
+\backslash
+includegraphics[width=5cm]{figs/utm02.jpg}}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+watermarkpage
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Mandatory pages 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+coverpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+superpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+certification
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frontmatter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+declaration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout 14: Dedication
+Dedication
+\end_layout
+
+\begin_layout 15: Acknowledgement
+Acknowledgement
+\end_layout
+
+\begin_layout 16: Abstract
+This is the English abstract
+\end_layout
+
+\begin_layout 17: Abstrak (Malay)
+Ini adalah abstrak Bahasa Melayu
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listoftables
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listoffigures
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%List of abbreviation 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listofabbre
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addabbre{XML}{Extensible Markup Language}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%List of symbols 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listofsymbols
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addsymbol{$
+\backslash
+gamma$}{Whatever}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Uncomment if have appendices
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listofappendices
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+mainmatter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Section
+Problem Background
+\end_layout
+
+\begin_layout Standard
+Introduction to the thesis 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b2}
+\end_layout
+
+\end_inset
+
+ to the thesis 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{okamoto2004improved}
+\end_layout
+
+\end_inset
+
+.
+ Note the difference between 
+\family typewriter
+
+\backslash
+citep{}
+\family default
+ and 
+\family typewriter
+
+\backslash
+citet{}
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Section
+State-of-the-Arts
+\end_layout
+
+\begin_layout Section
+Problem Statement
+\end_layout
+
+\begin_layout Section
+Objective and Scope
+\end_layout
+
+\begin_layout Section
+Organization
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% You can call another LyX document (using identical document class) by
+\end_layout
+
+\begin_layout Plain Layout
+
+% Insert -> File -> Child Document
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "ch2.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Research Methodology
+\end_layout
+
+\begin_layout Section
+Top-level View
+\end_layout
+
+\begin_layout Section
+Research Activities
+\end_layout
+
+\begin_layout Section
+Controllables vs.
+ Obseravables
+\end_layout
+
+\begin_layout Section
+Techniques
+\end_layout
+
+\begin_layout Section
+Tools and Platforms
+\end_layout
+
+\begin_layout Section
+Chapter Summary
+\end_layout
+
+\begin_layout Chapter
+Proposed Work
+\end_layout
+
+\begin_layout Section
+The Big Picture
+\end_layout
+
+\begin_layout Section
+Analytical Proofs
+\end_layout
+
+\begin_layout Section
+Results and Discussion
+\end_layout
+
+\begin_layout Section
+Chapter Summary
+\end_layout
+
+\begin_layout Chapter
+Conclusion
+\end_layout
+
+\begin_layout Section
+Research Outcomes
+\end_layout
+
+\begin_layout Section
+Contributions to Knowledge
+\end_layout
+
+\begin_layout Section
+Future Works
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "reference"
+options "abbrvnat"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\start_of_appendix
+Mathematical Proofs
+\end_layout
+
+\begin_layout Chapter
+Pseudo-codes
+\end_layout
+
+\begin_layout Chapter
+Time-series Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%This is required to make List of Appendices possible.
+ Remove when have no appendix.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+endmatter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

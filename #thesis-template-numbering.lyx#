@@ -1,0 +1,1250 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass utmthesis
+\begin_preamble
+\usepackage{url, hyperref} 
+\usepackage[final]{pdfpages}
+\usepackage[pages=some]{background}
+\usepackage[labelfont=bf]{caption}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-std
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author -1165546607 "nadzir,,," 
+\end_header
+
+\begin_body
+
+\begin_layout 1a: Title
+Dummy Proposal
+\end_layout
+
+\begin_layout 2: Author
+Author
+\end_layout
+
+\begin_layout 3: Degree
+Master of Engineering (Computer and Microelectronic System)
+\end_layout
+
+\begin_layout 4: Faculty
+Faculty of Electrical Engineering 
+\end_layout
+
+\begin_layout 5: Thesis Date
+July 2016 
+\end_layout
+
+\begin_layout 6: Award
+2
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Options for Award 
+\end_layout
+
+\begin_layout Plain Layout
+
+% 1.
+ Bachelor Degree Project Report  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 2.
+ Master's Project Report (By course work)  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 3.
+ Master's Dissertation (By course work and research)  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 4.
+ Master's Thesis (By research)  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 5.
+ Doctor of Philosophy Thesis  
+\end_layout
+
+\begin_layout Plain Layout
+
+% 6.
+ Engineering Doctorate Thesis 
+\end_layout
+
+\begin_layout Plain Layout
+
+% 7.
+ First Stage Proposal 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout 7a: 1st Supervisor
+M.Y.
+ Supervisor
+\end_layout
+
+\begin_layout 7b: 2nd Supervisor
+My Other Supervisor
+\end_layout
+
+\begin_layout 7c: 3rd Supervisor
+And Another One
+\end_layout
+
+\begin_layout 7c: 4th Supervisor
+And Another
+\end_layout
+
+\begin_layout 7c: 5th Supervisor
+And the Funder
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% We support upto FIVE supervisors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Option to add watermark page 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Comment for final version
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+backgroundsetup{scale=1,angle=0,opacity=.1,hshift=0.25in,vshift=-0.5in,contents={
+\backslash
+includegraphics[width=5cm]{figs/utm02.jpg}}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+watermarkpage
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Mandatory pages 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+coverpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+superpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+certification
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frontmatter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+declaration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout 14: Dedication
+
+\emph on
+Dedication
+\end_layout
+
+\begin_layout 15: Acknowledgement
+Acknowledgement
+\end_layout
+
+\begin_layout 16: Abstract
+This is the English abstract
+\end_layout
+
+\begin_layout 17: Abstrak (Malay)
+Ini adalah abstrak Bahasa Melayu
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listoftables
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listoffigures
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% List of abbreviation 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Delete if not in use
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listofabbre
+\end_layout
+
+\begin_layout Plain Layout
+
+% Add yours here
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addabbre{XML}{Extensible Markup Language}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% List of symbols 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Delete if not in use
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listofsymbols
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addsymbol{$
+\backslash
+gamma$}{Whatever}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Uncomment if have appendices
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listofappendices
+\end_layout
+
+\begin_layout Plain Layout
+
+% Also add 
+\backslash
+endmatters at the end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+mainmatter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+doublespacing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Section
+Motivation
+\end_layout
+
+\begin_layout Standard
+A paragraph here.
+ Certain types of documents have special environments (an abstract and a
+ title for journal, but not letter).
+ Certain types of documents have special environments (an abstract and a
+ title for journal, but not letter).
+ Certain types of documents have special environments (an abstract and a
+ title for journal, but not letter).
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1165546607 1440232814
+Another paragraph.
+ Certain types of documents have special environments (an abstract and a
+ title for journal, but not letter).
+ 
+\change_unchanged
+Certain types of documents have special environments (an abstract and a
+ title for journal, but not letter).
+ Certain types of documents have special environments (an abstract and a
+ title for journal, but not letter
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We define a letter as ...
+\end_layout
+
+\end_inset
+
+).
+ 
+\change_inserted -1165546607 1440232822
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1165546607 1440232828
+This is the added parts...
+\change_unchanged
+
+\end_layout
+
+\begin_layout Theorem
+A quote...
+\end_layout
+
+\begin_layout Standard
+The steps taken is as follows.
+\end_layout
+
+\begin_layout Enumerate
+Step 1 Some text...
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Step 1 Some text...
+\end_layout
+
+\begin_layout Enumerate
+Step 2
+\end_layout
+
+\begin_layout Enumerate
+Step 3
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Step 2
+\end_layout
+
+\begin_layout Enumerate
+Step 3
+\end_layout
+
+\begin_layout Section
+State-of-the-art techniques
+\end_layout
+
+\begin_layout Standard
+In Chapter
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:lit-review"
+
+\end_inset
+
+, the basic theoretical in XY is defined.
+\end_layout
+
+\begin_layout Section
+Problem Statement
+\end_layout
+
+\begin_layout Section
+Objective and Scope
+\end_layout
+
+\begin_layout Section
+Report Organization
+\end_layout
+
+\begin_layout Standard
+Chapter
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "chap:Methodology"
+
+\end_inset
+
+ discusses ...
+\end_layout
+
+\begin_layout Chapter
+Literature Review
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:lit-review"
+
+\end_inset
+
+This 
+\series bold
+work
+\series default
+ is using 
+\emph on
+xxx
+\emph default
+ technique to...
+\end_layout
+
+\begin_layout Section
+Theoretical Background
+\end_layout
+
+\begin_layout Section
+Related Work
+\end_layout
+
+\begin_layout Section
+Summary
+\end_layout
+
+\begin_layout Chapter
+Methodology
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Methodology"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Design of Experiment
+\end_layout
+
+\begin_layout Section
+Design Parameters
+\end_layout
+
+\begin_layout Section
+Performance Criteria
+\end_layout
+
+\begin_layout Section
+Tools and Techniques
+\end_layout
+
+\begin_layout Standard
+This project uses the technique first proposed in reference
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "okamoto2004improved"
+
+\end_inset
+
+..
+\end_layout
+
+\begin_layout Section
+Project Activities and Deliverables
+\end_layout
+
+\begin_layout Chapter
+Math Proofs
+\end_layout
+
+\begin_layout Section
+In-line Formula
+\end_layout
+
+\begin_layout Standard
+The XY technique relies on managing 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ in relation with 
+\begin_inset Formula $\sqrt{x^{2}-\zeta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Off-line Formula
+\end_layout
+
+\begin_layout Subsection
+Single-line
+\end_layout
+
+\begin_layout Standard
+Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:e1"
+
+\end_inset
+
+ describes the relation of ....
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\alpha=\frac{\delta}{\sqrt[4]{\sigma_{i}-\varepsilon}}\label{eq:e1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Multiple-Line
+\end_layout
+
+\begin_layout Standard
+Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "e2a"
+
+\end_inset
+
+ ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\alpha & = & \frac{\delta}{\sqrt[4]{\sigma_{i}-\varepsilon}}\mbox{{\,\,\,\,\,\,\,\,\ where\,}}i=0,1,2,..\label{eq:e2}\\
+ & \approx & 1-\tau\label{e2a}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Matrices
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\begin{bmatrix}a\\
+ &  & a\\
+\\
+ &  &  & a\\
+\\
+\end{bmatrix} & \approx & \begin{bmatrix} &  &  & a & a\\
+\\
+ &  & a\\
+\\
+ & a &  &  & a
+\end{bmatrix}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Theorem
+\end_layout
+
+\begin_layout Standard
+This is Euclid's...
+\end_layout
+
+\begin_layout Theorem
+hhshshskka
+\end_layout
+
+\begin_layout Chapter
+Floats
+\end_layout
+
+\begin_layout Section
+Inserting Pictures
+\end_layout
+
+\begin_layout Standard
+Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig5"
+
+\end_inset
+
+ shows....
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/roc_SA.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Whatever caption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/roc_SA.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Whatever caption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/roc_SA.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Whatever caption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/roc_SA.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Whatever caption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Main Figure Caption
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig5"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tables
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Table caption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Year
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+d
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ddd
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "reference"
+options "utmthesis-numbering"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\start_of_appendix
+Source Code
+\end_layout
+
+\begin_layout Standard
+This is the code.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+tye[jjakkaak
+\end_layout
+
+\begin_layout Plain Layout
+
+jajaja
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+endmatter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
