@@ -4,13 +4,14 @@
 
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
-\newcommand\@classdate    {2015/10/29}
-\newcommand\@classversion {v4.0}
+\newcommand\@classdate    {2015/11/16}
+\newcommand\@classversion {v4.1}
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
 \RequirePackage{acronym}
 \RequirePackage{times}
-\RequirePackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black, pdfborder=false]{hyperref}
+% \RequirePackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black, pdfborder=false]{hyperref} %yap% [v4.1] commented out. 
+\RequirePackage[hidelinks]{hyperref} %yap% [v4.1] new method to hide links. does not produce hyperref error.
 \pdfstringdefDisableCommands{%
 \let\MakeUppercase\relax
 } 
@@ -1058,7 +1059,7 @@
 % -----------------
 % Define an empty, do-nothing \phantomsection.
 % It will be over-written by 'hyperref' package.
-\def\phantomsection{\relax}
+% \def\phantomsection{\relax} %yap% [v4.1] commented out
 
 % +++++++++++++++++++++
 % Externalized string  - Supervisor & Author Declaration
@@ -1097,7 +1098,7 @@
 				 \textbf{Title}:	& \@title \space \@titletwo \space \@titlethree\\
 				 \textbf{Degree}: & \@degree\\
 				 \textbf{Source}: & {\jobname}.tex \\ 
-	  			 \textbf{UTMThesis version}: & 4.0\\
+	  			 \textbf{UTMThesis version}: & \@classversion\\ %yap% [v4.1] changed from "v4.0" to \@classversion
   				 \textbf{Date}: & \today 
 			\end{tabular}		  		
 		
@@ -1529,6 +1530,8 @@ which can be obtained from SPS or your faculty.}\end{large}
 %         [P8] Acknowledgements
 % ----------------------------------------
 \newenvironment{acknowledgement}{%
+  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\acknowledgementname}
   \label{pre:acknowledgement}
   \@showpagenumber
@@ -1540,6 +1543,8 @@ which can be obtained from SPS or your faculty.}\end{large}
 %            [P9] Abstract
 % ----------------------------------------
 \newenvironment{abstract}{%
+  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\abstractname}
   \label{pre:abstract}
   \@showpagenumber
@@ -1551,6 +1556,8 @@ which can be obtained from SPS or your faculty.}\end{large}
 %       [P10] Abstrak (Translated)
 % ----------------------------------------
 \newenvironment{abstrak}{%
+  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\abstractlocalname}
   \label{pre:abstrak}
   \@showpagenumber
@@ -1597,6 +1604,8 @@ which can be obtained from SPS or your faculty.}\end{large}
 %   \tableofcontents  - to generate 'Table of Contents' page
 %
 \renewcommand{\tableofcontents}{%
+  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\contentsname}
   \label{pre:tableofcontents}
 
@@ -1630,6 +1639,8 @@ which can be obtained from SPS or your faculty.}\end{large}
 %   \listoftables  - to generate 'List of Tables' page
 %
 \renewcommand{\listoftables}{
+  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\listtablename}
   \label{pre:listoftables}
   
@@ -1663,6 +1674,8 @@ which can be obtained from SPS or your faculty.}\end{large}
 %   \listoffigures  - to generate 'List of Figures' page
 %
 \renewcommand{\listoffigures}{
+  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\listfigurename}
   \label{pre:listoffigures}
   
@@ -1732,6 +1745,8 @@ which can be obtained from SPS or your faculty.}\end{large}
 %  Adapted from losymbol.sty by Gerry Van Dooren
 %
 \newcommand\listofsymbols{
+  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\listsymbolname}
   \label{pre:listofsymbols}
 
@@ -1789,6 +1804,8 @@ $\hspace{\@scsymbol}$
 %  Adapted from losymbol.sty by Gerry Van Dooren
 %
 \newcommand\listofabbre{
+  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\listabbrename}
   \label{pre:listofabbre}
   
@@ -1905,6 +1922,9 @@ $\hspace{\@scabbre}$
 
 % Custom heading section for References page
 \newcommand\utmthesis@bibheading{
+  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
+
   \chapter*{\bibname}%
   %\@showpagenumber%  restore page number display
   \@hidepagenumber
