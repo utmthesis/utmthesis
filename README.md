@@ -1,5 +1,5 @@
 # utmthesis
-The LaTeX class for Universiti Teknologi Malaysia (UTM) thesis.  
+The LaTeX class for Universiti Teknologi Malaysia (UTM) thesis.  www.utm.my
 
 ## Description
 
