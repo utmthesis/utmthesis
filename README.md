@@ -1,5 +1,5 @@
 # utmthesis
-The LaTeX class for Universiti Teknologi Malaysia (UTM) thesis.  www.utm.my
+The LaTeX class for Universiti Teknologi Malaysia (UTM) thesis.  
 
 ## Description
 
@@ -11,10 +11,10 @@ Even though you just spent 1-2 days writing the content of your thesis (because 
 
 There are tutorials, tips & examples on how to use LaTeX provided in the downloads and wiki section.
 
-Download the latest version of utmthesis (both in LaTeX and LyX) here! 
+Download the latest version of utmthesis (both in LaTeX and LyX) here! Due to upload limitation imposed by Google, we could not upload new updates here. Temporarily, we provide download links from FKE Postgraduate Website while we are trying to resolve the upload restriction here.
 
 ## Versions
-Current stable release: version 4.1
+Current stable release: version 4.20
 
 ## Required Software
 1.  A good LaTeX compiler.  For Windows users, you may try MikTeX or ProTeXt. For Linux users, install TeX Live. Note: If you install a minimal/basic version of a Latex compiler, you will face problems. Go for the full download.  For Ubuntu (or Debian based distros) type the following command in your shell to auto-magically install all the above software like a boss:
@@ -30,12 +30,4 @@ Paper type : A4 (The paper used for the thesis is A4. Sometimes this is incorrec
 Page Scaling : None (It is a common mistake to select "Fit to printable area", or "Shrink to printable area", or similar. Leave it at "None".)
 Scale : 100% (This causes the page to zoom in/out. Leave it at 100%.)
 Failing to set these printer job options will result in a printout that is out of scale/margin.
-
-## Bugs/Issues
-If you have any basic problems or need help, please discuss it at utmthesis-discuss:
-http://groups.google.com/group/utmthesis-discuss
-
-If you have found any legitimate bugs or issues, please report at "Issues" located at the right-side of this GitHub repository. We will take a look at the problem and try to fix it if possible. However, this is not the place to ask for help, use utmthesis-discuss for that.
-
-Please also report broken links on this homepage and anything else that is inconsistent.
 
