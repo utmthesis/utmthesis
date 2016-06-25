@@ -4,8 +4,8 @@
 
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
-\newcommand\@classdate    {2015/11/16}
-\newcommand\@classversion {v4.1}
+\newcommand\@classdate    {2016/6/24}
+\newcommand\@classversion {v4.2}
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
 \RequirePackage{acronym}
@@ -109,6 +109,10 @@
 
 %Needed for optional list of algorithms
 \RequirePackage{algorithm}
+\RequirePackage{enumitem}
+\setlist{leftmargin=0.5in}
+
+%\RequirePackage{pdfpages}
 
 % [A3] Page margin (left: 4cm, top/right/bottom: 2.5cm)
 % [A4] Page number position (top: 1.25cm, right: 2.5cm)
@@ -274,14 +278,15 @@
 %   \degree     - The degree name  (e.g. Master of Science)
 %   \faculty    - The faculty name (e.g. Faculty of Science)
 %   \titledate  - The published date to be appeared on cover page (e.g. 2008)
-%   \award      - Award statement option (1-7):
+%   \award      - Award statement option (1-8):
 %                   1. Bachelor Degree Project Report
 %                   2. Master's Project Report (By course work)
 %                   3. Master's Dissertation (By course work and research)
 %                   4. Master's Thesis (By research)
 %                   5. Doctor of Philosophy Thesis
-%                   6. Engineering Doctorate Thesis
-%                   7. Thesis Proposal
+%                   6. Other PhD Thesis
+%                   7. Generic PhD Thesis
+%                   8. Thesis Proposal
 %   \superone    - The supervisor fullname
 %   \supertwo    - 2nd supervisor fullname (if any)
 %   \superthree  - 3rd supervisor fullname (if any)
@@ -292,6 +297,7 @@
 \newcommand{\titletwo}[1]{\def\@titletwo{#1}}
 \newcommand{\titlethree}[1]{\def\@titlethree{#1}}
 \newcommand{\degree}[1]{\def\@degree{#1}}
+\newcommand{\specialization}[1]{\def\@specialization{#1}}
 \newcommand{\faculty}[1]{\def\@faculty{#1}}
 \newcommand{\titledate}[1]{\def\@titledate{#1}}
 \newcommand{\award}[1]{\def\@award{#1}}
@@ -307,6 +313,7 @@
 \titlethree{}
 \author{}
 \degree{}
+\specialization{}
 \faculty{}
 \titledate{}
 \award{}
@@ -332,17 +339,22 @@
     \@latex@warning{\@classname: \@backslashchar degree not defined in preamble}
     \def\@degree{Your Degree}
   \fi
-
+  
+  \ifx\@specialization\@empty
+    \@latex@warning{\@classname: \@backslashchar specialization not defined in preamble}
+    \def\@specialization{Your Specialization}
+  \fi
+  
   \ifx\@award\@empty
     \@latex@warning{\@classname: \@backslashchar award not defined in preamble}
     \def\@award{4}% default to Master's Research
   \else
     \ifnum \@award <1
-      \@latex@warning{\@classname: \@backslashchar award valid value is 1-7}
+      \@latex@warning{\@classname: \@backslashchar award valid value is 1-8}
       \def\@award{5}% default to PhD
     \fi
     \ifnum \@award >7
-      \@latex@warning{\@classname: \@backslashchar award valid valid is 1-7}
+      \@latex@warning{\@classname: \@backslashchar award valid valid is 1-8}
       \def\@award{5}% default to PhD
     \fi
   \fi
@@ -925,15 +937,16 @@
 % Externalized string  - Title Page
 % +++++++++++++++++++++
 % -- English
-\newcommand{\awardphrase@degree@en}               {A final year project report submitted in}
+\newcommand{\awardphrase@degree@en}               {A final year project report submitted in partial fulfilment of the}
 \newcommand{\awardphrase@mastercourse@en}         {A project report submitted in partial fulfilment of the}
 \newcommand{\awardphrase@mastercourseresearch@en} {A dissertation submitted in partial fulfilment of the}
 \newcommand{\awardphrase@masterresearch@en}       {A thesis submitted in fulfilment of the}
 \newcommand{\awardphrase@phd@en}                  {A thesis submitted in fulfilment of the}
-\newcommand{\awardphrase@engdoc@en}               {A dissertation submitted in partial fulfilment of the}
+\newcommand{\awardphrase@otherphd@en}             {A dissertation submitted in partial fulfilment of the}
+\newcommand{\awardphrase@genericphd@en}           {A thesis submitted in fulfilment of the}
 \newcommand{\awardphrase@proposal@en}             {A proposal submitted in fulfilment of the}
 \newcommand{\@awardphrasetwo@en}                  {requirements for the award of the degree of}
-\newcommand{\@awardphrasetwodegree@en}            {partial fulfilment of the requirements for the award of the degree of}
+\newcommand{\@awardphrasetwodegree@en}            {requirements for the award of the degree of}
 \newcommand{\@awardphrasethree@en}                {requirements for the First Stage Examination of the degree of}
 % -- Malay
 \newcommand{\awardphrase@degree@ms}               {Laporan projek tahun akhir ini dikemukakan sebagai memenuhi}
@@ -941,7 +954,8 @@
 \newcommand{\awardphrase@mastercourseresearch@ms} {Disertasi ini dikemukakan sebagai memenuhi sebahagian daripada}
 \newcommand{\awardphrase@masterresearch@ms}       {Tesis ini dikemukakan sebagai memenuhi}
 \newcommand{\awardphrase@phd@ms}                  {Tesis ini dikemukakan sebagai memenuhi}
-\newcommand{\awardphrase@engdoc@ms}               {Disertasi ini dikemukakan sebagai memenuhi sebahagian daripada}
+\newcommand{\awardphrase@otherphd@ms}             {Disertasi ini dikemukakan sebagai memenuhi sebahagian daripada}
+\newcommand{\awardphrase@genericphd@ms}           {Tesis ini dikemukakan sebagai memenuhi}
 \newcommand{\awardphrase@proposal@ms}             {Cadangan ini dikemukakan sebagai memenuhi}
 \newcommand{\@awardphrasetwo@ms}                  {syarat penganugerahan ijazah}
 \newcommand{\@awardphrasetwodegree@ms}            {sebahagian daripada syarat penganugerahan ijazah}
@@ -952,7 +966,8 @@
 \newcommand{\awardphrase@mastercourseresearch}{\getstring{awardphrase@mastercourseresearch}}
 \newcommand{\awardphrase@masterresearch}      {\getstring{awardphrase@masterresearch}}
 \newcommand{\awardphrase@phd}                 {\getstring{awardphrase@phd}}
-\newcommand{\awardphrase@engdoc}              {\getstring{awardphrase@engdoc}}
+\newcommand{\awardphrase@otherphd}            {\getstring{awardphrase@otherphd}}
+\newcommand{\awardphrase@genericphd}          {\getstring{awardphrase@genericphd}}
 \newcommand{\awardphrase@proposal}            {\getstring{awardphrase@proposal}}
 \newcommand{\@awardphrasetwo}                 {\getstring{@awardphrasetwo}}
 \newcommand{\@awardphrasethree}               {\getstring{@awardphrasethree}}
@@ -964,7 +979,8 @@
 \newcommand{\degreetype@mastercourseresearch@en} {dissertation}
 \newcommand{\degreetype@masterresearch@en}       {thesis}
 \newcommand{\degreetype@phd@en}                  {thesis}
-\newcommand{\degreetype@engdoc@en}               {dissertation}
+\newcommand{\degreetype@otherphd@en}             {dissertation}
+\newcommand{\degreetype@genericphd@en}           {thesis}
 \newcommand{\degreetype@proposal@en}             {proposal}
 % -- Malay
 \newcommand{\degreetype@degree@ms}               {laporan projek tahun akhir}
@@ -972,7 +988,8 @@
 \newcommand{\degreetype@mastercourseresearch@ms} {disertasi}
 \newcommand{\degreetype@masterresearch@ms}       {tesis}
 \newcommand{\degreetype@phd@ms}                  {tesis}
-\newcommand{\degreetype@msgdoc@ms}               {disertasi}
+\newcommand{\degreetype@otherphd@ms}             {disertasi}
+\newcommand{\degreetype@genericphd@ms}           {tesis}
 \newcommand{\degreetype@proposal@ms}             {cadangan}
 % --
 \newcommand{\degreetype@degree}              {\getstring{degreetype@degree}}
@@ -980,7 +997,8 @@
 \newcommand{\degreetype@mastercourseresearch}{\getstring{degreetype@mastercourseresearch}}
 \newcommand{\degreetype@masterresearch}      {\getstring{degreetype@masterresearch}}
 \newcommand{\degreetype@phd}                 {\getstring{degreetype@phd}}
-\newcommand{\degreetype@engdoc}              {\getstring{degreetype@engdoc}}
+\newcommand{\degreetype@otherphd}            {\getstring{degreetype@otherphd}}
+\newcommand{\degreetype@genericphd}          {\getstring{degreetype@genericphd}}
 \newcommand{\degreetype@proposal}            {\getstring{degreetype@proposal}}
 
 \renewcommand{\maketitle}{
@@ -1005,10 +1023,14 @@
     \def\@degreetype{\degreetype@phd}
   \fi
   \ifnum \@award=6
-    \def\@awardphrase{\awardphrase@engdoc}
-    \def\@degreetype{\degreetype@engdoc}
+    \def\@awardphrase{\awardphrase@otherphd}
+    \def\@degreetype{\degreetype@otherphd}
   \fi
   \ifnum \@award=7
+    \def\@awardphrase{\awardphrase@genericphd}
+    \def\@degreetype{\degreetype@genericphd}
+  \fi
+  \ifnum \@award=8
     \def\@awardphrase{\awardphrase@proposal}
     \def\@degreetype{\degreetype@proposal}
   \fi
@@ -1037,15 +1059,23 @@
    	\ifnum \@award=1
     		\@awardphrasetwodegree\\
     \else 
-    	    \ifnum \@award=7
+    	    \ifnum \@award=8
  		   \@awardphrasethree\\ 
- 	    \else 	
+ 	\else 	
            \@awardphrasetwo\\
         \fi
     \fi
-    \@degree\\
+    \@degree
+    \ifnum \@award=2
+    		\space(\@specialization)
+    	\fi
+    \\
     \vspace{\stretch{1}}
-    \@faculty\\
+    \ifnum \@award=7
+    		School of Graduate Studies\\
+    \else
+    		\@faculty\\
+    	\fi
     Universiti Teknologi Malaysia\\
     \vspace{\stretch{1}}
     \expandafter\MakeUppercase{\@titledate}\\
@@ -1097,6 +1127,7 @@
 				 \textbf{Supervisor (Main)}: & \@supervisorone \\
 				 \textbf{Title}:	& \@title \space \@titletwo \space \@titlethree\\
 				 \textbf{Degree}: & \@degree\\
+				 \textbf{Specialization}: & \@specialization\\
 				 \textbf{Source}: & {\jobname}.tex \\ 
 	  			 \textbf{UTMThesis version}: & \@classversion\\ %yap% [v4.1] changed from "v4.0" to \@classversion
   				 \textbf{Date}: & \today 
@@ -1147,10 +1178,13 @@
   
   % This is a new page which tells the student to insert form PSZ 19:16
   \@hidepagenumber
-  \null\par\vfill \begin{large}\textit{Replace this page with form PSZ 19:16 (Pind. 1/07),
-  which can be obtained from SPS or your faculty.}\end{large}
+  \null
+  \par\vfill 
+  \begin{large}\noindent\textit{Replace this page with form PSZ 19:16 (Pind. 1/07), which can be obtained from SPS or your faculty.}\end{large}
+  %\includepdf{thesisdeclarationform_2013_latest.pdf}  
   \par\vfill
-  \pagebreak
+  \pagebreak  
+  
 }
 
 % ========================================
@@ -1183,13 +1217,34 @@
     \def\@degreetype{\degreetype@phd}
   \fi
   \ifnum \@award=6
-    \def\@degreetype{\degreetype@engdoc}
+    \def\@degreetype{\degreetype@otherphd}
   \fi
   \ifnum \@award=7
+    \def\@degreetype{\degreetype@genericphd}
+  \fi
+  \ifnum \@award=8
     \def\@degreetype{\degreetype@proposal}
   \fi
   
-  \ifnum \@award=7   
+    \ifnum \@award=1   
+	 \begingroup
+       ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
+  award of the degree of \@degree''
+     \endgroup
+  \else
+    \ifnum \@award=2   
+	 \begingroup
+       ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
+  award of the degree of \@degree\space (\@specialization)''
+     \endgroup
+  \else
+    \ifnum \@award=7   
+	 \begingroup
+       ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
+  award of the degree of \@degree''
+     \endgroup
+  \else
+    \ifnum \@award=8   
 	 \begingroup
        ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
   First Stage Examination of \@degree''
@@ -1197,8 +1252,11 @@
   \else
   	 \begingroup
        ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  award of the degree of \@degree''
+  award of the degree of \@degree\space in \@specialization''
      \endgroup
+  \fi
+  \fi
+  \fi
   \fi
   }
 % -- Malay
@@ -1224,9 +1282,12 @@
     \def\@degreetype{\degreetype@phd}
   \fi
   \ifnum \@award=6
-    \def\@degreetype{\degreetype@engdoc}
+    \def\@degreetype{\degreetype@otherphd}
   \fi
   \ifnum \@award=7
+    \def\@degreetype{\degreetype@genericphd}
+  \fi
+  \ifnum \@award=8
     \def\@degreetype{\degreetype@proposal}
   \fi
   
@@ -1235,15 +1296,26 @@
   	``\@addressone\space akui bahawa \MakeLowercase{\@addresstwo}\space telah membaca \@degreetype\space ini dan 	pada \\pandangan \@addressthree\space \@degreetype\space ini adalah memadai \\dari segi skop dan kualiti untuk tujuan penganugerahan \\ijazah \@degree''
     \endgroup
   \else 
+  \ifnum \@award=2
+    	\begingroup
+  	``\@addressone\space akui bahawa \MakeLowercase{\@addresstwo}\space telah membaca \@degreetype\space ini dan 	pada \\pandangan \@addressthree\space \@degreetype\space ini adalah memadai \\dari segi skop dan kualiti untuk tujuan penganugerahan \\ijazah \@degree\space (\@specialization)''
+    \endgroup
+  \else
   	 \ifnum \@award=7   
 	 \begingroup
-       ``\@addressone\space akui bahawa \MakeLowercase{\@addresstwo}\space telah membaca \@degreetype\space ini dan 	pada \\ pandangan \@addressthree\space \@degreetype\space ini adalah memadai dari segi skop dan kualiti untuk tujuan \\ Peperiksaan Peringkat Pertama bagi ijazah \@degree''
+       ``\@addressone\space akui bahawa \MakeLowercase{\@addresstwo}\space telah membaca \@degreetype\space ini dan 	pada \\ pandangan \@addressthree\space \@degreetype\space ini adalah memadai \\dari segi skop dan kualiti untuk tujuan penganugerahan \\ijazah \@degree''
     \endgroup
-  \else  	
+  \else 
+  \ifnum \@award=8
+    	\begingroup
+  	``\@addressone\space akui bahawa \MakeLowercase{\@addresstwo}\space telah membaca \@degreetype\space ini dan 	pada \\pandangan \@addressthree\space \@degreetype\space ini adalah memadai \\dari segi skop dan kualiti untuk tujuan\\ Peperiksaan Peringkat Pertama bagi ijazah \@degree''
+    \endgroup
+  \else 	
   	\begingroup
-  	``\@addressone\space akui bahawa \MakeLowercase{\@addresstwo}\space telah membaca \@degreetype\space ini dan 	pada pandangan \@addressthree\space \@degreetype\space ini adalah memadai dari segi skop dan kualiti untuk tujuan 
-   penganugerahan ijazah \@degree''
+  	``\@addressone\space akui bahawa \MakeLowercase{\@addresstwo}\space telah membaca \@degreetype\space ini dan 	pada \\pandangan \@addressthree\space \@degreetype\space ini adalah memadai \\dari segi skop dan kualiti untuk tujuan penganugerahan \\ijazah \@degree\space dalam \@specialization''
     \endgroup
+  \fi
+  \fi
   \fi
   \fi
   }
@@ -1380,7 +1452,7 @@
 \@hidepagenumber
 % For now, just notify the student to attach the Cooperation Declaration here.
 \noindent \vspace{10cm}\\ \begin{large}\textit{Replace this page with the Cooperation Declaration form,
-which can be obtained from SPS or your faculty.}\end{large}
+which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} when your research is done in collaboration with other institutions that requires their consent to publish the finding in this document.] }\end{large}
 
 % The following have been commented because it does not confirm to the UTM format.
 
@@ -2052,3 +2124,6 @@ $\hspace{\@scabbre}$
 the#1\endcsname\quad}}
 \makeatother
 \onehalfspacing
+
+   
+
