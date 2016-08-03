@@ -14,7 +14,7 @@ There are tutorials, tips & examples on how to use LaTeX provided in the downloa
 Download the latest version of utmthesis (both in LaTeX and LyX) here! Due to upload limitation imposed by Google, we could not upload new updates here. Temporarily, we provide download links from FKE Postgraduate Website while we are trying to resolve the upload restriction here.
 
 ## Versions
-Current stable release: version 4.20
+Current stable release: version 4.3
 
 ## Required Software
 1.  A good LaTeX compiler.  For Windows users, you may try MikTeX or ProTeXt. For Linux users, install TeX Live. Note: If you install a minimal/basic version of a Latex compiler, you will face problems. Go for the full download.  For Ubuntu (or Debian based distros) type the following command in your shell to auto-magically install all the above software like a boss:
@@ -31,3 +31,9 @@ Page Scaling : None (It is a common mistake to select "Fit to printable area", o
 Scale : 100% (This causes the page to zoom in/out. Leave it at 100%.)
 Failing to set these printer job options will result in a printout that is out of scale/margin.
 
+## Changes in version 4.3
+
+1.  Changed from "final year project report" to "report" based on 2015 manual.
+2.  Solved the irregular spacing between title-author and author-degree type.
+3.  Bold numbers for chapters in TOC.
+4.  Removed one quote mark from Supervisor's Declaration

@@ -5,7 +5,7 @@
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
 \newcommand\@classdate    {2016/6/24}
-\newcommand\@classversion {v4.2}
+\newcommand\@classversion {v4.3}
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
 \RequirePackage{acronym}
@@ -612,7 +612,7 @@
       \leavevmode \bfseries
       \advance\leftskip %\@tempdima
       \toc@sep@a
-      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth {\normalfont \hss #2}\par
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth {\bfseries \hss #2}\par  % yap [v4.3] changed from "\normalfont \hss #2" to "\normalfont \hss #2"
       \penalty9999% to discourage chapter to appear at last line of page
     \endgroup
   \fi}
@@ -873,11 +873,12 @@
 % Copied from book.cls:
 %   \@makecaption  - defines table/figure caption formatting
 %
+
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip
-  \sbox\@tempboxa{\bfseries #1: \normalfont #2}%  change caption label to bold, period.
+  \sbox\@tempboxa{\bfseries #1 \normalfont #2}
   \ifdim \wd\@tempboxa >\hsize
-    \textbf{#1}: #2\par
+    \textbf{#1} #2\par 
   \else
     \global \@minipagefalse
     \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
@@ -937,7 +938,7 @@
 % Externalized string  - Title Page
 % +++++++++++++++++++++
 % -- English
-\newcommand{\awardphrase@degree@en}               {A final year project report submitted in partial fulfilment of the}
+\newcommand{\awardphrase@degree@en}               {A report submitted in partial fulfilment of the} %yap [v4.3] Changed from "final year project report" to "report" based on 2015 manual.
 \newcommand{\awardphrase@mastercourse@en}         {A project report submitted in partial fulfilment of the}
 \newcommand{\awardphrase@mastercourseresearch@en} {A dissertation submitted in partial fulfilment of the}
 \newcommand{\awardphrase@masterresearch@en}       {A thesis submitted in fulfilment of the}
@@ -949,7 +950,7 @@
 \newcommand{\@awardphrasetwodegree@en}            {requirements for the award of the degree of}
 \newcommand{\@awardphrasethree@en}                {requirements for the First Stage Examination of the degree of}
 % -- Malay
-\newcommand{\awardphrase@degree@ms}               {Laporan projek tahun akhir ini dikemukakan sebagai memenuhi}
+\newcommand{\awardphrase@degree@ms}               {Laporan ini dikemukakan sebagai memenuhi} %yap [v4.3] Changed from "Laporan projek tahun akhir" to "Laporan" based on 2015 manual.
 \newcommand{\awardphrase@mastercourse@ms}         {Laporan projek ini dikemukakan sebagai memenuhi sebahagian daripada}
 \newcommand{\awardphrase@mastercourseresearch@ms} {Disertasi ini dikemukakan sebagai memenuhi sebahagian daripada}
 \newcommand{\awardphrase@masterresearch@ms}       {Tesis ini dikemukakan sebagai memenuhi}
@@ -974,7 +975,7 @@
 \newcommand{\@awardphrasetwodegree}           {\getstring{@awardphrasetwodegree}}
 
 % -- English
-\newcommand{\degreetype@degree@en}               {final year project report}
+\newcommand{\degreetype@degree@en}               {report} %yap [v4.3] Changed from "final year project report" to "report" based on 2015 manual.
 \newcommand{\degreetype@mastercourse@en}         {project report}
 \newcommand{\degreetype@mastercourseresearch@en} {dissertation}
 \newcommand{\degreetype@masterresearch@en}       {thesis}
@@ -983,7 +984,7 @@
 \newcommand{\degreetype@genericphd@en}           {thesis}
 \newcommand{\degreetype@proposal@en}             {proposal}
 % -- Malay
-\newcommand{\degreetype@degree@ms}               {laporan projek tahun akhir}
+\newcommand{\degreetype@degree@ms}               {laporan} %yap [v4.3] Changed from "Laporan projek tahun akhir" to "Laporan" based on 2015 manual.
 \newcommand{\degreetype@mastercourse@ms}         {laporan projek}
 \newcommand{\degreetype@mastercourseresearch@ms} {disertasi}
 \newcommand{\degreetype@masterresearch@ms}       {tesis}
@@ -1042,17 +1043,17 @@
     \null\vspace{0.4in}
 	\ifx\@titlethree\@empty
         \ifx\@titletwo\@empty
-            \MakeUppercase{\@title} \par
+            \MakeUppercase{\@title} \\% yap [v4.3] changed from "\par" to "\\"
         \else
             \MakeUppercase{\@title} \\
-            \MakeUppercase{\@titletwo} \par
+            \MakeUppercase{\@titletwo} \\ % yap [v4.3] changed from "\par" to "\\"
         \fi
     \else
 		\MakeUppercase{\@title} \\
         \MakeUppercase{\@titletwo} \\
-        \MakeUppercase{\@titlethree} \par
+        \MakeUppercase{\@titlethree} \\ % yap [v4.3] changed from "\par" to "\\"
     \fi
-    \vspace{\stretch{2}}
+    \vspace{\stretch{2}} 
     \MakeUppercase{\@author}\\
     \vspace{\stretch{2}}
     \@awardphrase\\
@@ -1228,20 +1229,20 @@
   
     \ifnum \@award=1   
 	 \begingroup
-       ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  award of the degree of \@degree''
+       ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
+  award of the degree of \@degree'' %yap [v4.3] removed one quote mark
      \endgroup
   \else
     \ifnum \@award=2   
 	 \begingroup
-       ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  award of the degree of \@degree\space (\@specialization)''
+       ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
+  award of the degree of \@degree\space (\@specialization)'' %yap [v4.3] removed one quote mark
      \endgroup
   \else
     \ifnum \@award=7   
 	 \begingroup
-       ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  award of the degree of \@degree''
+       ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
+  award of the degree of \@degree'' %yap [v4.3] removed one quote mark
      \endgroup
   \else
     \ifnum \@award=8   
@@ -1950,6 +1951,7 @@ $\hspace{\@scabbre}$
     \begin{center}		%Added by Vishnu for proper centering and realign
 		\bfseries\MakeUppercase{\title@colname}\vspace*{-\toc@tab@jumps}
     \end{center}
+    %%     
     \begin{flushright}	%Added by Vishnu for proper flushright and realign
 		\bfseries\MakeUppercase{\page@colname}
 		\linebreak
