@@ -5,10 +5,11 @@
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
 \newcommand\@classdate    {2016/6/24}
-\newcommand\@classversion {v4.3}
+\newcommand\@classversion {v4.2}
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
 \RequirePackage{acronym}
+\RequirePackage{emptypage}
 \RequirePackage{times}
 % \RequirePackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black, pdfborder=false]{hyperref} %yap% [v4.1] commented out. 
 \RequirePackage[hidelinks]{hyperref} %yap% [v4.1] new method to hide links. does not produce hyperref error.
@@ -92,7 +93,9 @@
 % [C3] Character size
 %      (CAPITAL LETTER not less than 0.2cm, small-letter not less than 0.15cm)
 % ---------------------------------------------------------
-\LoadClass[a4paper,oneside,12pt,onecolumn,openany]{book}
+
+%default oneside printing
+\LoadClass[a4paper,oneside,12pt,onecolumn]{book}
 
 % To allow ToC level changes
 \RequirePackage{tocvsec2}
@@ -121,43 +124,42 @@
 % Set page margin without using 'geometry' package.
 %
 % The resulting layout is closely equivalent to:
-% \RequirePackage[top=2.5cm,left=4cm,right=2.5cm,bottom=2.5cm]{geometry}
+\RequirePackage[top=2.5cm,left=4cm,right=2.5cm,bottom=2.5cm]{geometry}
 %
 % The only difference: page number top margin (1.25cm) is set precisely here.
 %
 \newlength{\margin@pagenumber@top}
-\newlength{\margin@top}
-\newlength{\margin@bottom}
-\newlength{\margin@left}
-\newlength{\margin@right}
-%
-% Define margin values:
+%\newlength{\margin@top}
+%\newlength{\margin@bottom}
+%\newlength{\margin@left}
+%\newlength{\margin@right}
+%%
+%% Define margin values:
 \setlength\margin@pagenumber@top {1.25cm}
-\setlength\margin@top            {2.5cm}
-\setlength\margin@bottom         {2.5cm}
-\setlength\margin@left           {4.0cm}
-\setlength\margin@right          {2.5cm}
-%
-% Set page margin:
-% left
-\setlength\oddsidemargin      {\margin@left}
-  \addtolength\oddsidemargin  {-1.0in}% remove the default 1 inch
-% top
-\setlength\topmargin          {\margin@pagenumber@top}
-  \addtolength\topmargin      {-1.0in}% remove the default 1 inch
-\setlength\headheight         {0.8\baselineskip}% 0.8 = -20% extra line spacing
-\setlength\headsep            {\margin@top}
-  \addtolength\headsep        {-\margin@pagenumber@top}
-  \addtolength\headsep        {-\headheight}
-% bottom
-\setlength\textheight         {\paperheight}
-  \addtolength\textheight     {-\margin@top}
-  \addtolength\textheight     {-\margin@bottom}
-% right
-\setlength\textwidth          {\paperwidth}
-  \addtolength\textwidth      {-\margin@left}
-  \addtolength\textwidth      {-\margin@right}
-
+%\setlength\margin@top            {2.5cm}
+%\setlength\margin@bottom         {2.5cm}
+%\setlength\margin@left           {4.0cm}
+%\setlength\margin@right          {2.5cm}
+%%
+%% Set page margin:
+%% left
+%\setlength\oddsidemargin      {\margin@left}
+%  \addtolength\oddsidemargin  {-1.0in}% remove the default 1 inch
+%% top
+%\setlength\topmargin          {\margin@pagenumber@top}
+%  \addtolength\topmargin      {-1.0in}% remove the default 1 inch
+%\setlength\headheight         {0.8\baselineskip}% 0.8 = -20% extra line spacing
+%\setlength\headsep            {\margin@top}
+%  \addtolength\headsep        {-\margin@pagenumber@top}
+%  \addtolength\headsep        {-\headheight}
+%% bottom
+%\setlength\textheight         {\paperheight}
+%  \addtolength\textheight     {-\margin@top}
+%  \addtolength\textheight     {-\margin@bottom}
+%% right
+%\setlength\textwidth          {\paperwidth}
+%  \addtolength\textwidth      {-\margin@left}
+%  \addtolength\textwidth      {-\margin@right}
 
 % Define an if@appendix flags, to be used in \chapter
 % to switch formatting between chapter/appendix title.
@@ -278,7 +280,7 @@
 %   \degree     - The degree name  (e.g. Master of Science)
 %   \faculty    - The faculty name (e.g. Faculty of Science)
 %   \titledate  - The published date to be appeared on cover page (e.g. 2008)
-%   \award      - Award statement option (1-8):
+%   \award      - Award statement option (1-7):
 %                   1. Bachelor Degree Project Report
 %                   2. Master's Project Report (By course work)
 %                   3. Master's Dissertation (By course work and research)
@@ -612,7 +614,7 @@
       \leavevmode \bfseries
       \advance\leftskip %\@tempdima
       \toc@sep@a
-      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth {\bfseries \hss #2}\par  % yap [v4.3] changed from "\normalfont \hss #2" to "\normalfont \hss #2"
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth {\bfseries \hss #2}\par % yap [v4.3] changed from "\normalfont \hss #2" to "\bfseries \hss #2"
       \penalty9999% to discourage chapter to appear at last line of page
     \endgroup
   \fi}
@@ -682,11 +684,7 @@
 %   \@endpart - called at the end of the \part command
 %
 \renewcommand\part{%
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
+  \if@openright\cleardoublepage\@hidepagenumber\else\clearpage\@hidepagenumber\fi
   \@hidepagenumber%  this page does not have page number
   \if@twocolumn
     \onecolumn
@@ -873,12 +871,11 @@
 % Copied from book.cls:
 %   \@makecaption  - defines table/figure caption formatting
 %
-
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip
-  \sbox\@tempboxa{\bfseries #1 \normalfont #2}
+  \sbox\@tempboxa{\bfseries #1: \normalfont #2}%  change caption label to bold, period.
   \ifdim \wd\@tempboxa >\hsize
-    \textbf{#1} #2\par 
+    \textbf{#1}: #2\par
   \else
     \global \@minipagefalse
     \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
@@ -1036,14 +1033,15 @@
     \def\@degreetype{\degreetype@proposal}
   \fi
   
-% start drawing title page
+% start drawing title page  
+  \if@openright\cleardoublepage\else\clearpage\fi
   \phantomsection% anchor mark for hyperref to navigate to
   \label{pre:titlepage}
   \begin{center}
     \null\vspace{0.4in}
 	\ifx\@titlethree\@empty
         \ifx\@titletwo\@empty
-            \MakeUppercase{\@title} \\% yap [v4.3] changed from "\par" to "\\"
+            \MakeUppercase{\@title} \\ % yap [v4.3] changed from "\par" to "\\"
         \else
             \MakeUppercase{\@title} \\
             \MakeUppercase{\@titletwo} \\ % yap [v4.3] changed from "\par" to "\\"
@@ -1053,7 +1051,7 @@
         \MakeUppercase{\@titletwo} \\
         \MakeUppercase{\@titlethree} \\ % yap [v4.3] changed from "\par" to "\\"
     \fi
-    \vspace{\stretch{2}} 
+    \vspace{\stretch{2}}
     \MakeUppercase{\@author}\\
     \vspace{\stretch{2}}
     \@awardphrase\\
@@ -1139,8 +1137,7 @@
   			\@hidepagenumber
   			\vfill \par
   			\BgThispage
-  			\pagebreak
-	  	\end{center} 
+  		\end{center} 
 	\endgroup
 }
 
@@ -1149,6 +1146,8 @@
 % ----------------------------------------
 \newcommand{\coverpage}{%
   \pagenumbering{alph}% avoid pagenumber conflict, required in hyperref
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \begingroup
 	\@hidepagenumber	
 	\@hidepagenumber
@@ -1175,17 +1174,16 @@
     \null
     \vspace{0.75in}
   \endgroup
-  \pagebreak
-  
+    
   % This is a new page which tells the student to insert form PSZ 19:16
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks  
   \@hidepagenumber
   \null
   \par\vfill 
   \begin{large}\noindent\textit{Replace this page with form PSZ 19:16 (Pind. 1/07), which can be obtained from SPS or your faculty.}\end{large}
   %\includepdf{thesisdeclarationform_2013_latest.pdf}  
   \par\vfill
-  \pagebreak  
-  
 }
 
 % ========================================
@@ -1347,6 +1345,8 @@
             \def\@addressthree{\pronouns@we@possessive}
     \fi
 
+    \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
+    \phantomsection %yap% [v4.1] added for hyperref bookmarks
     \@hidepagenumber
     \vspace*{0cm}
     \vfill
@@ -1442,14 +1442,15 @@
     			\end{tabular}
     		\end{center}
     	\fi	
-    	\vfill
-    \pagebreak
+    	\vfill   
 }
 
 % ========================================
 %      [P4] Cooperation Declaration
 % ----------------------------------------
 \newcommand{\certification}{
+\if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
+\phantomsection %yap% [v4.1] added for hyperref bookmarks
 \@hidepagenumber
 % For now, just notify the student to attach the Cooperation Declaration here.
 \noindent \vspace{10cm}\\ \begin{large}\textit{Replace this page with the Cooperation Declaration form,
@@ -1516,8 +1517,6 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 %  & Tarikh : & \ldots\ldots\ldots\ldots \\
 %Nama        & & \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots \\
 %\end{tabular}
-
-\pagebreak
 }
 
 
@@ -1562,8 +1561,8 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 
 
 \newcommand{\declaration}{%
-  \clearpage
-  \phantomsection
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \label{pre:declaration}
   %\addcontentsline{toc}{nonmainmatterchapter}{\normalfont\declarationname}
   %added
@@ -1586,8 +1585,8 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 %            [P7] Dedication
 % ----------------------------------------
 \newenvironment{dedication}{%
-  \clearpage
-  \phantomsection
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
+  \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \label{pre:dedication}
   %\addcontentsline{toc}{nonmainmatterchapter}{\normalfont\dedicationname}
   %added
@@ -1603,7 +1602,7 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 %         [P8] Acknowledgements
 % ----------------------------------------
 \newenvironment{acknowledgement}{%
-  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
   \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\acknowledgementname}
   \label{pre:acknowledgement}
@@ -1616,7 +1615,7 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 %            [P9] Abstract
 % ----------------------------------------
 \newenvironment{abstract}{%
-  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
   \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\abstractname}
   \label{pre:abstract}
@@ -1629,7 +1628,7 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 %       [P10] Abstrak (Translated)
 % ----------------------------------------
 \newenvironment{abstrak}{%
-  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
   \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\abstractlocalname}
   \label{pre:abstrak}
@@ -1677,7 +1676,7 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 %   \tableofcontents  - to generate 'Table of Contents' page
 %
 \renewcommand{\tableofcontents}{%
-  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
   \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\contentsname}
   \label{pre:tableofcontents}
@@ -1712,7 +1711,7 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 %   \listoftables  - to generate 'List of Tables' page
 %
 \renewcommand{\listoftables}{
-  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
   \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\listtablename}
   \label{pre:listoftables}
@@ -1747,7 +1746,7 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 %   \listoffigures  - to generate 'List of Figures' page
 %
 \renewcommand{\listoffigures}{
-  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
   \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\listfigurename}
   \label{pre:listoffigures}
@@ -1818,7 +1817,7 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 %  Adapted from losymbol.sty by Gerry Van Dooren
 %
 \newcommand\listofsymbols{
-  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
   \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\listsymbolname}
   \label{pre:listofsymbols}
@@ -1877,7 +1876,7 @@ $\hspace{\@scsymbol}$
 %  Adapted from losymbol.sty by Gerry Van Dooren
 %
 \newcommand\listofabbre{
-  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \if@openright\cleardoublepage\else\clearpage\fi %yap% [v4.1] added for hyperref bookmarks
   \phantomsection %yap% [v4.1] added for hyperref bookmarks
   \chapter*{\listabbrename}
   \label{pre:listofabbre}
@@ -1951,7 +1950,6 @@ $\hspace{\@scabbre}$
     \begin{center}		%Added by Vishnu for proper centering and realign
 		\bfseries\MakeUppercase{\title@colname}\vspace*{-\toc@tab@jumps}
     \end{center}
-    %%     
     \begin{flushright}	%Added by Vishnu for proper flushright and realign
 		\bfseries\MakeUppercase{\page@colname}
 		\linebreak
@@ -1996,7 +1994,7 @@ $\hspace{\@scabbre}$
 
 % Custom heading section for References page
 \newcommand\utmthesis@bibheading{
-  \clearpage %yap% [v4.1] added for hyperref bookmarks
+  \if@openright\cleardoublepage\@hidepagenumber\else\clearpage\@hidepagenumber\fi %yap% [v4.1] added for hyperref bookmarks
   \phantomsection %yap% [v4.1] added for hyperref bookmarks
 
   \chapter*{\bibname}%
