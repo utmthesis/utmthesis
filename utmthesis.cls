@@ -4,8 +4,8 @@
 
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
-\newcommand\@classdate    {2016/6/24}
-\newcommand\@classversion {v4.2}
+\newcommand\@classdate    {2016/8/18}
+\newcommand\@classversion {v5.1}
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
 \RequirePackage{acronym}
@@ -300,6 +300,7 @@
 \newcommand{\titlethree}[1]{\def\@titlethree{#1}}
 \newcommand{\degree}[1]{\def\@degree{#1}}
 \newcommand{\specialization}[1]{\def\@specialization{#1}}
+\newcommand{\intakeyear}[1]{\def\@intakeyear{#1}}
 \newcommand{\faculty}[1]{\def\@faculty{#1}}
 \newcommand{\titledate}[1]{\def\@titledate{#1}}
 \newcommand{\award}[1]{\def\@award{#1}}
@@ -316,6 +317,7 @@
 \author{}
 \degree{}
 \specialization{}
+\intakeyear{}
 \faculty{}
 \titledate{}
 \award{}
@@ -346,7 +348,12 @@
     \@latex@warning{\@classname: \@backslashchar specialization not defined in preamble}
     \def\@specialization{Your Specialization}
   \fi
-  
+
+  \ifx\@intakeyear\@empty
+    \@latex@warning{\@classname: \@backslashchar specialization not defined in preamble}
+    \def\@intakeyear{\year}
+  \fi
+    
   \ifx\@award\@empty
     \@latex@warning{\@classname: \@backslashchar award not defined in preamble}
     \def\@award{4}% default to Master's Research
@@ -614,7 +621,7 @@
       \leavevmode \bfseries
       \advance\leftskip %\@tempdima
       \toc@sep@a
-      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth {\bfseries \hss #2}\par % yap [v4.3] changed from "\normalfont \hss #2" to "\bfseries \hss #2"
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth {\normalfont \hss #2}\par
       \penalty9999% to discourage chapter to appear at last line of page
     \endgroup
   \fi}
@@ -935,7 +942,7 @@
 % Externalized string  - Title Page
 % +++++++++++++++++++++
 % -- English
-\newcommand{\awardphrase@degree@en}               {A report submitted in partial fulfilment of the} %yap [v4.3] Changed from "final year project report" to "report" based on 2015 manual.
+\newcommand{\awardphrase@degree@en}               {A final year project report submitted in partial fulfilment of the}
 \newcommand{\awardphrase@mastercourse@en}         {A project report submitted in partial fulfilment of the}
 \newcommand{\awardphrase@mastercourseresearch@en} {A dissertation submitted in partial fulfilment of the}
 \newcommand{\awardphrase@masterresearch@en}       {A thesis submitted in fulfilment of the}
@@ -947,7 +954,7 @@
 \newcommand{\@awardphrasetwodegree@en}            {requirements for the award of the degree of}
 \newcommand{\@awardphrasethree@en}                {requirements for the First Stage Examination of the degree of}
 % -- Malay
-\newcommand{\awardphrase@degree@ms}               {Laporan ini dikemukakan sebagai memenuhi} %yap [v4.3] Changed from "Laporan projek tahun akhir" to "Laporan" based on 2015 manual.
+\newcommand{\awardphrase@degree@ms}               {Laporan projek tahun akhir ini dikemukakan sebagai memenuhi}
 \newcommand{\awardphrase@mastercourse@ms}         {Laporan projek ini dikemukakan sebagai memenuhi sebahagian daripada}
 \newcommand{\awardphrase@mastercourseresearch@ms} {Disertasi ini dikemukakan sebagai memenuhi sebahagian daripada}
 \newcommand{\awardphrase@masterresearch@ms}       {Tesis ini dikemukakan sebagai memenuhi}
@@ -972,7 +979,7 @@
 \newcommand{\@awardphrasetwodegree}           {\getstring{@awardphrasetwodegree}}
 
 % -- English
-\newcommand{\degreetype@degree@en}               {report} %yap [v4.3] Changed from "final year project report" to "report" based on 2015 manual.
+\newcommand{\degreetype@degree@en}               {final year project report}
 \newcommand{\degreetype@mastercourse@en}         {project report}
 \newcommand{\degreetype@mastercourseresearch@en} {dissertation}
 \newcommand{\degreetype@masterresearch@en}       {thesis}
@@ -981,7 +988,7 @@
 \newcommand{\degreetype@genericphd@en}           {thesis}
 \newcommand{\degreetype@proposal@en}             {proposal}
 % -- Malay
-\newcommand{\degreetype@degree@ms}               {laporan} %yap [v4.3] Changed from "Laporan projek tahun akhir" to "Laporan" based on 2015 manual.
+\newcommand{\degreetype@degree@ms}               {laporan projek tahun akhir}
 \newcommand{\degreetype@mastercourse@ms}         {laporan projek}
 \newcommand{\degreetype@mastercourseresearch@ms} {disertasi}
 \newcommand{\degreetype@masterresearch@ms}       {tesis}
@@ -1041,15 +1048,15 @@
     \null\vspace{0.4in}
 	\ifx\@titlethree\@empty
         \ifx\@titletwo\@empty
-            \MakeUppercase{\@title} \\ % yap [v4.3] changed from "\par" to "\\"
+            \MakeUppercase{\@title} \par
         \else
             \MakeUppercase{\@title} \\
-            \MakeUppercase{\@titletwo} \\ % yap [v4.3] changed from "\par" to "\\"
+            \MakeUppercase{\@titletwo} \par
         \fi
     \else
 		\MakeUppercase{\@title} \\
         \MakeUppercase{\@titletwo} \\
-        \MakeUppercase{\@titlethree} \\ % yap [v4.3] changed from "\par" to "\\"
+        \MakeUppercase{\@titlethree} \par
     \fi
     \vspace{\stretch{2}}
     \MakeUppercase{\@author}\\
@@ -1060,15 +1067,33 @@
     \else 
     	    \ifnum \@award=8
  		   \@awardphrasethree\\ 
- 	\else 	
+ 		\else 	
            \@awardphrasetwo\\
-        \fi
+    		\fi
     \fi
-    \@degree
-    \ifnum \@award=2
-    		\space(\@specialization)
+    
+    \ifnum \@award=1
+    		\@degree\space(\@specialization)\\
+    	\else 
+    		\ifnum \@award=2
+    			\@degree\space(\@specialization)\\
+    		\else 
+    			\ifnum \@award=7
+    				\@degree\\
+    			\else 
+    				\ifnum \@award=8
+    					\@degree\space(\@specialization)\\
+    				\else 
+    					\ifnum \@intakeyear<2015
+    						\@degree\space(\@specialization)\\
+    					\else
+    						\@degree\\
+    					\fi
+    				\fi
+    			\fi
+    		\fi
     	\fi
-    \\
+    
     \vspace{\stretch{1}}
     \ifnum \@award=7
     		School of Graduate Studies\\
@@ -1227,31 +1252,36 @@
   
     \ifnum \@award=1   
 	 \begingroup
-       ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  award of the degree of \@degree'' %yap [v4.3] removed one quote mark
+       ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
+  award of the degree of \@degree \space (\@specialization)''
      \endgroup
   \else
     \ifnum \@award=2   
 	 \begingroup
-       ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  award of the degree of \@degree\space (\@specialization)'' %yap [v4.3] removed one quote mark
+       ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
+  award of the degree of \@degree\space (\@specialization)''
      \endgroup
   \else
     \ifnum \@award=7   
 	 \begingroup
-       ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  award of the degree of \@degree'' %yap [v4.3] removed one quote mark
+       ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
+  award of the degree of \@degree''
      \endgroup
   \else
     \ifnum \@award=8   
 	 \begingroup
        ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  First Stage Examination of \@degree''
+  First Stage Examination of \@degree \space (\@specialization)''
      \endgroup
   \else
   	 \begingroup
        ``\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  award of the degree of \@degree\space in \@specialization''
+  award of the degree of \@degree 
+    		\ifnum \@intakeyear<2015
+    			\space(\@specialization)    		
+    		\else 
+  			\space in \@specialization''
+  		\fi
      \endgroup
   \fi
   \fi
@@ -1307,7 +1337,7 @@
   \else 
   \ifnum \@award=8
     	\begingroup
-  	``\@addressone\space akui bahawa \MakeLowercase{\@addresstwo}\space telah membaca \@degreetype\space ini dan 	pada \\pandangan \@addressthree\space \@degreetype\space ini adalah memadai \\dari segi skop dan kualiti untuk tujuan\\ Peperiksaan Peringkat Pertama bagi ijazah \@degree''
+  	``\@addressone\space akui bahawa \MakeLowercase{\@addresstwo}\space telah membaca \@degreetype\space ini dan 	pada \\pandangan \@addressthree\space \@degreetype\space ini adalah memadai \\dari segi skop dan kualiti untuk tujuan\\ Peperiksaan Peringkat Pertama bagi ijazah \@degree \space(\@specialization)''
     \endgroup
   \else 	
   	\begingroup
