@@ -5,7 +5,7 @@
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
 \newcommand\@classdate    {2016/8/18}
-\newcommand\@classversion {v5.1}
+\newcommand\@classversion {v5.2}
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
 \RequirePackage{acronym}
@@ -552,9 +552,9 @@
 \setlength{\toc@sep@figs}{0cm}
 \setlength{\toc@sep@figstitle}{2.5cm}
 \setlength{\toc@sep@a}{6em}
-\setlength{\toc@sep@b}{4em}% nadzir changed this from 3em
-\setlength{\toc@sep@c}{4em}
-\setlength{\toc@sep@d}{4em}
+\setlength{\toc@sep@b}{2.5em} % Zohair changed this from 4em for heading level for 1.1
+\setlength{\toc@sep@c}{3em}   % Zohair changed this from 4em for heading level for 1.1.1
+\setlength{\toc@sep@d}{3.5em} % Zohair changed this from 4em for heading level for 1.1.1.1
 
 % Table jumps for centering the "TITLE" in all ToCs
 \setlength{\toc@tab@jumps}{3.5em}
@@ -1259,7 +1259,7 @@
     \ifnum \@award=2   
 	 \begingroup
        ```\@addressone\space hereby declare that \@addresstwo\space have read this \@degreetype\space and in \@addressthree\space \\ opinion this \@degreetype\space is sufficient in terms of scope and quality for the \\
-  award of the degree of \@degree\space (\@specialization)''
+  award of the degree of \@degree\space (\emph{\@specialization})''
      \endgroup
   \else
     \ifnum \@award=7   
@@ -1280,7 +1280,7 @@
     		\ifnum \@intakeyear<2015
     			\space(\@specialization)    		
     		\else 
-  			\space in \@specialization''
+  			(\emph{\@specialization})''
   		\fi
      \endgroup
   \fi
@@ -1484,7 +1484,7 @@
 \@hidepagenumber
 % For now, just notify the student to attach the Cooperation Declaration here.
 \noindent \vspace{10cm}\\ \begin{large}\textit{Replace this page with the Cooperation Declaration form,
-which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} when your research is done in collaboration with other institutions that requires their consent to publish the finding in this document.] }\end{large}
+which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} when your research is done in collaboration with other institutions that requires their consent to publish the finding in this document.}\end{large}
 
 % The following have been commented because it does not confirm to the UTM format.
 
@@ -2154,6 +2154,3 @@ $\hspace{\@scabbre}$
 the#1\endcsname\quad}}
 \makeatother
 \onehalfspacing
-
-   
-

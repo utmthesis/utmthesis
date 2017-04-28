@@ -120,7 +120,7 @@ Style 2:_Author
   EndFont
 End
 
-Style 3:_Degree
+Style 3a:_Degree
   Margin        Static
   LatexType     Command
   LatexName     degree
@@ -128,11 +128,30 @@ Style 3:_Degree
   Align			Center
   BottomSep		0.5
   LabelType		static
-  LabelString	"<3: Degree:>"
+  LabelString	"<3a: Degree:>"
   LabelSep		x
   #label font definition
   LabelFont
     Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 3b:_Specialization
+  Margin        Static
+  LatexType     Command
+  LatexName     specialization
+  Category      FrontMatter
+  Align     Center
+  BottomSep   0.5
+  LabelType   static
+  LabelString "<3b: Specialization:>"
+  LabelSep    x
+  #label font definition
+  LabelFont
+    Series      Bold
   EndFont
   Font
     Size        large
@@ -458,5 +477,3 @@ Style 17:_Abstrak_(Malay)
     Series	    Bold
   EndFont
 End
-
-
