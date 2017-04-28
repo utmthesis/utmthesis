@@ -14,7 +14,7 @@ There are tutorials, tips & examples on how to use LaTeX provided in the downloa
 Download the latest version of utmthesis (both in LaTeX and LyX) here! Due to upload limitation imposed by Google, we could not upload new updates here. Temporarily, we provide download links from FKE Postgraduate Website while we are trying to resolve the upload restriction here.
 
 ## Versions
-Current stable release: version 5.1
+Current stable release: version 5.2
 
 ## Required Software
 1.  A good LaTeX compiler.  For Windows users, you may try MikTeX or ProTeXt. For Linux users, install TeX Live. Note: If you install a minimal/basic version of a Latex compiler, you will face problems. Go for the full download.  For Ubuntu (or Debian based distros) type the following command in your shell to auto-magically install all the above software like a boss:
@@ -30,6 +30,13 @@ Paper type : A4 (The paper used for the thesis is A4. Sometimes this is incorrec
 Page Scaling : None (It is a common mistake to select "Fit to printable area", or "Shrink to printable area", or similar. Leave it at "None".)
 Scale : 100% (This causes the page to zoom in/out. Leave it at 100%.)
 Failing to set these printer job options will result in a printout that is out of scale/margin.
+
+## Changes in version 5.2
+1.	Degree Specialization included.
+2.	Italicize Degree Specialization in supervisor(s) declaration.
+3.	Space between Title Heading and Title Name in ToC is reduced.Change the values of `em` at line 555, 556 and 557  in `utmthesis.cls` if required.Windows Notepad will not show the code correctly. Use Sublime Text or Notepad++  for this purpose.
+
+Note: On 64Bit OS, change the `Format 35` to `Format 49` in `utmthesis.layout`at line 13.
 
 ## Changes in version 5.1
 1.  The declaration and cover pages depends on the intake year.
