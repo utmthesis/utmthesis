@@ -100,7 +100,7 @@
 % To allow ToC level changes
 \RequirePackage{tocvsec2}
 
-% To meet [D1], we use \onehalfspacing command provided by 'setspace' package.
+% To meet [D1], we use \setstretch{1.435} command provided by 'setspace' package.
 % In addition, this package fixes common line-spacing issues (e.g. too-large
 % line-spacing in footnote) that happens when line-spacing is modified.
 \RequirePackage{setspace}
@@ -446,7 +446,7 @@
 
 % [D1] 1.5 line spacing
 % ---------------------
-\onehalfspacing
+\setstretch{1.435}
 
 
 % [D13] Don't start a new text paragraph on the last line of the page
@@ -821,7 +821,7 @@
       \@hidepagenumber
     \fi
   }
-  \onehalfspacing
+  \setstretch{1.435}
 }
 
 \renewcommand\@makeschapterhead[1]{%
@@ -835,7 +835,7 @@
     #1 % show chapter title
     \\*[2\@twolinespacing]% after chapter title
   }
-  \onehalfspacing  
+  \setstretch{1.435}  
 }
 
 % [C5] Title of (sub)section (bold)
@@ -1728,8 +1728,8 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 		\linebreak
     \end{flushright}
   \endgroup
-  %\onehalfspacing
-  \onehalfspacing
+  %\setstretch{1.435}
+  \setstretch{1.435}
   \@starttoc{toc}
 }
 
@@ -1763,8 +1763,8 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 		\linebreak
     \end{flushright}
   \endgroup
-  %\onehalfspacing
-  \onehalfspacing
+  %\setstretch{1.435}
+  \setstretch{1.435}
   \@starttoc{lot}
 }
 
@@ -1798,8 +1798,8 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
 		\linebreak
     \end{flushright}
   \endgroup
-  %\onehalfspacing
-  \onehalfspacing
+  %\setstretch{1.435}
+  \setstretch{1.435}
   \@starttoc{lof}
 }
 
@@ -1858,7 +1858,7 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
   
   
   %\vspace{\@twolinespacing} %Removed by Vishnu, not neccesary.
-  \onehalfspacing
+  \setstretch{1.435}
   \@starttoc{los}
 }
 
@@ -1916,7 +1916,7 @@ $\hspace{\@scsymbol}$
   \@showpagenumber
   
   %\vspace{\@twolinespacing} %Removed by Vishnu, not neccesary.
-  \onehalfspacing
+  \setstretch{1.435}
   \@starttoc{loabbre}
 }
 
@@ -1966,7 +1966,7 @@ $\hspace{\@scabbre}$
   \chapter*{\listappendixname}
   \label{pre:listofappendices}
   
-  \onehalfspacing %List of Symbols and Abbreviations were singlespacing, so reset it here
+  \setstretch{1.435} %List of Symbols and Abbreviations were singlespacing, so reset it here
   
   %Add Page Number
   \addcontentsline{toc}{section}{\MakeUppercase{\bf\listappendixname}{\normalfont}}
@@ -1985,7 +1985,7 @@ $\hspace{\@scabbre}$
 		\linebreak
     \end{flushright}
   \endgroup
-  \onehalfspacing
+  \setstretch{1.435}
   \@starttoc{loapp}
 }
 
@@ -2013,7 +2013,7 @@ $\hspace{\@scabbre}$
 		\linebreak
     \end{flushright}
   \endgroup
-  \onehalfspacing
+  \setstretch{1.435}
   \@starttoc{loa}
 }
 
@@ -2153,7 +2153,7 @@ $\hspace{\@scabbre}$
 \def\@seccntformat#1{\protect\makebox[0.5in][l]{\csname
 the#1\endcsname\quad}}
 \makeatother
-\onehalfspacing
+\setstretch{1.435}
 
    
 
