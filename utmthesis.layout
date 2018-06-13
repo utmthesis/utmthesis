@@ -10,7 +10,7 @@ Input stdstarsections.inc
 #Input stdinsets.inc
 #Input stdciteformats.inc
 
-Format 35
+Format 60
 
 Sides          1
 SecNumDepth    3
@@ -129,6 +129,44 @@ Style 3:_Degree
   BottomSep		0.5
   LabelType		static
   LabelString	"<3: Degree:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 3a:_Specialization
+  Margin        Static
+  LatexType     Command
+  LatexName     specialization
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<3a: Specialization:>"
+  LabelSep		x
+  #label font definition
+  LabelFont
+    Series	    Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 3b:_IntakeYear
+  Margin        Static
+  LatexType     Command
+  LatexName     intakeyear
+  Category      FrontMatter
+  Align			Center
+  BottomSep		0.5
+  LabelType		static
+  LabelString	"<3b: IntakeYear:>"
   LabelSep		x
   #label font definition
   LabelFont

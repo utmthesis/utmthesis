@@ -1,33 +1,33 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass utmthesis
 \begin_preamble
 \usepackage{url, hyperref} 
 \usepackage[final]{pdfpages}
 \usepackage[pages=some]{background}
-\usepackage[labelfont=bf]{caption}
 \end_preamble
 \use_default_options true
-\begin_modules
-theorems-std
-\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package none
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
-
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -38,16 +38,26 @@ theorems-std
 \use_hyperref false
 \papersize a4paper
 \use_geometry false
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -56,7 +66,10 @@ theorems-std
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -70,15 +83,23 @@ theorems-std
 \begin_body
 
 \begin_layout 1a: Title
-The Thesis Title 
+Quick Guide to Typesetting UTM Thesis Using LyX
 \end_layout
 
 \begin_layout 2: Author
-The Author 
+Muhammad Nadzir Marsono 
 \end_layout
 
 \begin_layout 3: Degree
-The Degree
+Doctor of Philosophy
+\end_layout
+
+\begin_layout 3a: Specialization
+Electrical Engineering
+\end_layout
+
+\begin_layout 3b: IntakeYear
+2018
 \end_layout
 
 \begin_layout 4: Faculty
@@ -86,11 +107,11 @@ Faculty of Electrical Engineering
 \end_layout
 
 \begin_layout 5: Thesis Date
-October 2013 
+June 2018 
 \end_layout
 
 \begin_layout 6: Award
-4 
+5 
 \end_layout
 
 \begin_layout Standard
@@ -149,9 +170,22 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% We support upto FIVE supervisors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout 7a: 1st Supervisor
-M.Y.
- Supervisor
+My Supervisor
 \end_layout
 
 \begin_layout 7b: 2nd Supervisor
@@ -167,21 +201,7 @@ And Another
 \end_layout
 
 \begin_layout 7c: 5th Supervisor
-And the Funder
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% We support upto FIVE supervisors
-\end_layout
-
-\end_inset
-
-
+And Lastly the Funder
 \end_layout
 
 \begin_layout Standard
@@ -266,19 +286,42 @@ declaration
 \end_layout
 
 \begin_layout 14: Dedication
-Dedication
+I dedicate this to all who dare to use LyX/LaTeX to typeset their thesis
 \end_layout
 
 \begin_layout 15: Acknowledgement
-Acknowledgement
+I thank all who made this happen.
 \end_layout
 
 \begin_layout 16: Abstract
-This is the English abstract
+Abstract should a 
+\emph on
+movie trailer
+\emph default
+, not a plot summary of your thesis.
+ It should describe the problem (statement), research objective, and research
+ approach.
+ Emphasize on original contributions.
 \end_layout
 
 \begin_layout 17: Abstrak (Malay)
-Ini adalah abstrak Bahasa Melayu
+Abstract in Malay is the hardest, even to me.
+ Using Google Translate is definitely a no-no.
+ Check all special terms on Dewan Bahasa and Pustaka website.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://prpm.dbp.gov.my/}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -326,7 +369,7 @@ listofabbre
 
 
 \backslash
-addabbre{XML}{Extensible Markup Language}
+addabbre{UTM}{Universiti Teknologi Malaysia}
 \end_layout
 
 \begin_layout Plain Layout
@@ -351,7 +394,7 @@ listofsymbols
 \backslash
 addsymbol{$
 \backslash
-gamma$}{Whatever}
+omega$}{Resistance}
 \end_layout
 
 \begin_layout Plain Layout
@@ -390,142 +433,465 @@ mainmatter
 Introduction
 \end_layout
 
-\begin_layout Section
-Problem Background
+\begin_layout Standard
+In general, every thesis must have a solidly defined problem that motivated
+ the research
 \end_layout
 
-\begin_layout Standard
-Introduction to the thesis 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "b2"
+\begin_layout Itemize
+Why the problem is important
+\end_layout
 
-\end_inset
+\begin_layout Itemize
+What others have done
+\end_layout
 
- to the thesis 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "okamoto2004improved"
+\begin_layout Itemize
+Describe the (novel) contribution and findings
+\end_layout
 
-\end_inset
+\begin_layout Itemize
+Document the experiments that validate the contribution
+\end_layout
 
-.
+\begin_layout Itemize
+Draw conclusions.
  
 \end_layout
 
-\begin_layout Section
-State-of-the-Arts
-\end_layout
-
-\begin_layout Section
-Problem Statement
-\end_layout
-
-\begin_layout Section
-Objective and Scope
-\end_layout
-
-\begin_layout Section
-Organization
-\end_layout
-
 \begin_layout Standard
-\begin_inset ERT
+Each thesis is unique and depends on the writer and the editor (your SV).
+ The following example a good starting point:  
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Abstract
+\series default
+: A short (few paragraphs) summary of the the dissertation.
+ Describe the problem and the research approach.
+ Emphasize the original contributions.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ch1 Introduction
+\series default
+: An overview of the problem; why it is important; problem definition; a
+ summary of extant work and a statement of your hypothesis or specific question
+ to be explored.
+ Make it readable by anyone.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ch 2 Literature Review
+\series default
+: Critical review of extant works.
+ Research gaps to be exploited.
+ Make the definitions precise, concise, and unambiguous.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ch 3 Methodology:
+\series default
+ Research design, central concept of your work, methods and procedure, variables.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ch 4 Validation work:
+\series default
+ Describe experiment details that provide evidence in support of your thesis.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ch 5 Results and analysis
+\series default
+: Describe the results of experiments that provide evidence in support of
+ your thesis.
+ Usually experiments or simulations
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Could be proof-of-concept
+\end_layout
+
+\begin_layout Itemize
+To show better efficiency
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Ch 6 Conclusion
+\series default
+: Summarize what was learned and how it can be applied.
+ Mention the possibilities for future research.
+\end_layout
+
+\begin_layout Chapter
+Installation
+\end_layout
+
+\begin_layout Itemize
+Download and install Lyx Bundle 
+\begin_inset Flex URL
 status open
 
 \begin_layout Plain Layout
 
-% You can call another LyX document (using identical document class) by
+ftp://ftp.lyx.org/pub/lyx/bin/2.2.3/LyX-223-Bundle-2.exe
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Miktex
+\end_layout
+
+\begin_layout Itemize
+\SpecialChar LyX
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Download UTM thesis template 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/utmthesis/utmthesis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Testing the template.
+ Open utmthesis.layout using a text editor
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Check line 13
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Make sure 
+\family typewriter
+Format 60
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Generating pdf
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Open 
+\family typewriter
+thesis-template-numbering.lyx
+\end_layout
+
+\begin_layout Itemize
+File 
+\family sans
+\SpecialChar menuseparator
+
+\family default
+ Export 
+\family sans
+\SpecialChar menuseparator
+
+\family default
+ PDF (pdflatex)
+\end_layout
+
+\begin_layout Itemize
+A PDF should be generated
+\end_layout
+
+\end_deeper
+\begin_layout Chapter
+Writing Flow
+\end_layout
+
+\begin_layout Itemize
+Vital information
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+title{The Thesis Title} 
 \end_layout
 
 \begin_layout Plain Layout
 
-% Insert -> File -> Child Document
+\family typewriter
+
+\backslash
+titletwo{Second Line (Optional)}
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+titlethree{Third Line (Optional)}
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+author{The Author} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+degree{Master of Engineering} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+specialization{Computer and Microelectronic System} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+intakeyear{2016} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+titledate{June 2018}
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+award{2}
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+1.
+ Bachelor Degree Project Report 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+2.
+ Master's Project Report (By course work) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+3.
+ Master's Dissertation (By course work and research) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+4.
+ Master's Thesis (By research) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+5.
+ Doctor of Philosophy Thesis 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+6.
+ Engineering Doctorate Thesis 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+7.
+ First Stage Proposal 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+superone{M.Y.
+ Supervisor}
 \end_layout
 
 \end_inset
 
-
+  
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "ch2.lyx"
+\begin_layout Itemize
+Preamble pages
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Acknowledgement 
+\end_layout
+
+\begin_layout Itemize
+Dedication
+\end_layout
+
+\begin_layout Itemize
+Abstract
+\end_layout
+
+\begin_layout Itemize
+Abstrak
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Please check with the Dewan Bahasa website 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://prpm.dbp.gov.my/
+\end_layout
 
 \end_inset
 
-
+ for special terms.
 \end_layout
 
-\begin_layout Chapter
-Research Methodology
+\end_deeper
+\begin_layout Itemize
+Abbreviations
 \end_layout
 
-\begin_layout Section
-Top-level View
+\begin_layout Itemize
+Symbols
 \end_layout
 
-\begin_layout Section
-Research Activities
+\end_deeper
+\begin_layout Itemize
+Main Matters: Parts, Chapters, and Sections
 \end_layout
 
-\begin_layout Section
-Controllables vs.
- Obseravables
+\begin_deeper
+\begin_layout Itemize
+Chapter
 \end_layout
 
-\begin_layout Section
-Techniques
+\begin_layout Itemize
+Section
 \end_layout
 
-\begin_layout Section
-Tools and Platforms
+\begin_layout Itemize
+Subsection
 \end_layout
 
-\begin_layout Section
-Chapter Summary
+\begin_layout Itemize
+Subsubsection
 \end_layout
 
-\begin_layout Chapter
-Proposed Work
+\begin_layout Itemize
+Try not to go beyond this! We receive many questions on this.
 \end_layout
 
-\begin_layout Section
-The Big Picture
-\end_layout
+\end_deeper
+\begin_layout Itemize
+When inserting citation using this template, click Insert>>Citation.
+ E.g., 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "okamoto2004improved"
+literal "false"
 
-\begin_layout Section
-Analytical Proofs
-\end_layout
+\end_inset
 
-\begin_layout Section
-Results and Discussion
-\end_layout
-
-\begin_layout Section
-Chapter Summary
-\end_layout
-
-\begin_layout Chapter
-Conclusion
-\end_layout
-
-\begin_layout Section
-Research Outcomes
-\end_layout
-
-\begin_layout Section
-Contributions to Knowledge
-\end_layout
-
-\begin_layout Section
-Future Works
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
+btprint "btPrintCited"
 bibfiles "reference"
 options "utmthesis-numbering"
 
@@ -537,14 +903,6 @@ options "utmthesis-numbering"
 \begin_layout Chapter
 \start_of_appendix
 Mathematical Proofs
-\end_layout
-
-\begin_layout Chapter
-Pseudo-codes
-\end_layout
-
-\begin_layout Chapter
-Time-series Results
 \end_layout
 
 \begin_layout Standard
