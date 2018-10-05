@@ -1391,9 +1391,12 @@
        			\ifx\@supervisortwo\@empty
            			\begin{center}
             				\begin{tabular}{l p{0.4in} @{:} p{0.3in} c}
-                				\signature@label & & & \\ \cline{4-4}
-                				\name@label & & & \@supervisorone \\ \cline{4-4}
-                				\date@label & & & \@date \\ \cline{4-4}
+                				%\signature@label & & & \\ \cline{4-4}
+                        %\name@label & & & \@supervisorone \\ \cline{4-4}
+                        %\date@label & & & \@date \\ \cline{4-4}
+                        \signature@label & & & \\ \cdashline{4-4}
+                				\name@label & & & \@supervisorone \\ 
+                				\date@label & & & \@date \\ 
            				\end{tabular}
             			\end{center}
         			\else
@@ -1603,9 +1606,12 @@ which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} w
   \vspace*{0cm}
   \begin{center}
     \begin{tabular}{l p{0.4in} @{:} p{0.3in} c}
-      \signature@label & & & \\ \cline{4-4}
-      \name@label & & & \@author \\ \cline{4-4}
-      \date@label & & & \@date \\ \cline{4-4}
+      %\signature@label & & & \\ \cline{4-4}
+      %\name@label & & & \@author \\ \cline{4-4}
+      %\date@label & & & \@date \\ \cline{4-4}
+      \signature@label & & & \\ \cdashline{4-4}
+      \name@label & & & \@author \\ 
+      \date@label & & & \@date \\ 
     \end{tabular}
   \end{center}
   \vspace{\fill}
