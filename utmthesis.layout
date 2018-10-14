@@ -38,7 +38,7 @@ Style Standard
   LatexType     Paragraph
   LatexName     dummy
   ParIndent     MM
-  ParSkip       0.4
+  ParSkip       2
   Align         Block
   AlignPossible Block, Left, Right, Center
   LabelType     No_Label
@@ -49,14 +49,14 @@ Style 1a:_Title
   LatexType     Command
   LatexName     title
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
   LabelString	"<1(a): Title:>"
-  LabelSep		x
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
@@ -68,14 +68,14 @@ Style 1b:_Title_2_(optional)
   LatexType     Command
   LatexName     titletwo
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
   LabelString	"<1(b): Title 2 (opt):>"
-  LabelSep		x
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
@@ -87,14 +87,14 @@ Style 1c:_Title_3_(optional)
   LatexType     Command
   LatexName     titlethree
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
   LabelString	"<1(c): Title 3 (opt):>"
-  LabelSep		x
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
@@ -106,14 +106,14 @@ Style 2:_Author
   LatexType     Command
   LatexName     author
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
   LabelString	"<2: Author:>"
-  LabelSep		x
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
@@ -125,376 +125,467 @@ Style 3:_Degree
   LatexType     Command
   LatexName     degree
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
   LabelString	"<3: Degree:>"
-  LabelSep		x
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 3a:_Specialization
+Style 4:_Specialization
   Margin        Static
   LatexType     Command
   LatexName     specialization
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<3a: Specialization:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<4: Specialization:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 3b:_IntakeYear
+Style 5:_IntakeYear
   Margin        Static
   LatexType     Command
   LatexName     intakeyear
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<3b: IntakeYear:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<5: IntakeYear:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 4:_Faculty
+Style 6:_School
+  Margin        Static
+  LatexType     Command
+  LatexName     school
+  Category      FrontMatter
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<6: School:>"
+  LabelSep	x
+  #label font definition
+  LabelFont
+    Series	Bold
+  EndFont
+  Font
+    Size        large
+  EndFont
+End
+
+Style 7:_Faculty
   Margin        Static
   LatexType     Command
   LatexName     faculty
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<4: Faculty:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<7: Faculty:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 5:_Thesis_Date
+Style 8:_Thesis_Date
   Margin        Static
   LatexType     Command
   LatexName     titledate
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<5: Thesis Date:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<8: Thesis Date:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 6:_Award
+Style 9:_Award
   Margin        Static
   LatexType     Command
   LatexName     award
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<6: Award:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<9: Award:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 7a:_1st_Supervisor
+Style 10a:_1st_Supervisor
   Margin        Static
   LatexType     Command
   LatexName     superone
   Category      FrontMatter
-  Align			Center
-  TopSep		    1.5
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<7(a): 1st Supervisor:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<10(a): 1st Supervisor:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 7b:_2nd_Supervisor
+Style 10b:_2nd_Supervisor
   Margin        Static
   LatexType     Command
   LatexName     supertwo
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<7(b): 2nd Supervisor:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<10(b): 2nd Supervisor:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 7c:_3rd_Supervisor
+Style 10c:_3rd_Supervisor
   Margin        Static
   LatexType     Command
   LatexName     superthree
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<7(c): 3rd Supervisor:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<10(c): 3rd Supervisor:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 7c:_4th_Supervisor
+Style 10d:_4th_Supervisor
   Margin        Static
   LatexType     Command
   LatexName     superfour
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<7(d): 4th Supervisor:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<10(d): 4th Supervisor:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 7c:_5th_Supervisor
+Style 10e:_5th_Supervisor
   Margin        Static
   LatexType     Command
   LatexName     superfive
   Category      FrontMatter
-  Align			Center
-  BottomSep		0.5
-  LabelType		static
-  LabelString	"<7(c): 5th Supervisor:>"
-  LabelSep		x
+  Align		Center
+  BottomSep	0.5
+  LabelType	static
+  LabelString	"<10(e): 5th Supervisor:>"
+  LabelSep	x
   #label font definition
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
   Font
     Size        large
   EndFont
 End
 
-Style 8:_Coverpage
-  Margin        Static
-  LatexType     Command
-  LatexName     coverpage 
-  Category      FrontMatter
-  Align			Center
-  BottomSep     0.5
-  LabelType		static
-  LabelString	"<8: Coverpage>"
-  LabelSep		x
-  #label font definition
-  LabelFont
-    Series	    Bold
-  EndFont
-  Font
-    Size        large
-  EndFont
+Style 11:_Coverpage
+	Margin			Dynamic
+	LatexType		Command
+	LatexName		coverpage
+	Category		FrontMatter
+	KeepEmpty		1
+	ParSkip			0
+	Align			left
+	LabelSep		xx
+	LabelType		Static
+	LabelString		"<11: Coverpage>"
+	LabelFont
+	  Series		Bold
+	  Color			Green
+	EndFont  
 End
 
-Style 9:_Supervisor_Page
-  Margin        Static
-  LatexType     Command
+Style 12:_Supervisor_Page
+  CopyStyle		11:_Coverpage
   LatexName     superpage 
-  Category      FrontMatter
-  Align			Center
-  BottomSep     0.5
-  LabelType		static
-  LabelString	"<9: Supervisor Page>"
-  LabelSep		x
-  #label font definition
-  LabelFont
-    Series	    Bold
-  EndFont
-  Font
-    Size        large
-  EndFont
+  LabelString	"<12: Supervisor Page>"
 End
 
-Style 10:_Student_Certification
-  Margin        Static
-  LatexType     Command
+Style 13:_Student_Certification
+  CopyStyle		11:_Coverpage
   LatexName     certification
-  Align			Center
-  Category      FrontMatter
-  BottomSep     0.5
-  LabelType		static
-  LabelString	"<10: Student Certification>"
-  LabelSep		x
-  #label font definition
-  LabelFont
-    Series	    Bold
-  EndFont
-  Font
-    Size        large
-  EndFont
+  LabelString	"<13: Student Certification>"
 End
 
-Style 11:_Frontmatter
-  Margin        Static
-  LatexType     Command
+Style 14:_Frontmatter
+  CopyStyle		11:_Coverpage
   LatexName     frontmatter 
-  Category      FrontMatter
-  Align			Center
-  BottomSep     0.5
-  LabelType		static
-  LabelString	"<11: Front Matter>"
-  LabelSep		x
-  #label font definition
-  LabelFont
-    Series	    Bold
-  EndFont
-  Font
-    Size        large
-  EndFont
+  LabelString	"<14: Front Matter>"
 End
 
-Style 12:_Maketitle
-  Margin        Static
-  LatexType     Command
+Style 15:_Maketitle
+  CopyStyle		11:_Coverpage
   LatexName     maketitle
-  Align			Center
-  Category      FrontMatter
-  BottomSep     1.5
-  LabelType		static
-  LabelString	"<12: Maketitle>"
-  LabelSep		x
-  #label font definition
-  LabelFont
-    Series	    Bold
-  EndFont
-  Font
-    Size        large
-  EndFont
+  LabelString	"<15: Maketitle>"
 End
 
-Style 13:_Declaration
-  Margin        Static
-  LatexType     Command
+Style 16:_Declaration
+  CopyStyle		11:_Coverpage
   LatexName     declaration
-  Category      FrontMatter
-  Align			Center
-  BottomSep     0.5
-  LabelType		static
-  LabelString	"<13: Declaration>"
-  LabelSep		x
-  #label font definition
-  LabelFont
-    Series	    Bold
-  EndFont
-  Font
-    Size        large
-  EndFont
+  LabelString	"<16: Declaration>"
 End
 
-Style 14:_Dedication
+Style 17:_Dedication
   LatexType     Environment
   LatexName     dedication
   Category      FrontMatter
-  Align			Block
+  Align		Block
   TopSep        1.5
   BottomSep     1.5
   LabelType     Centered_Top_Environment
-  LabelString   "<14: DEDICATION>"
+  LabelString   "<17: DEDICATION>"
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
 End
 
-Style 15:_Acknowledgement
+Style 18:_Acknowledgement
   LatexType     Environment
   LatexName     acknowledgement
   Category      FrontMatter
-  Align			Block
+  Align		Block
   BottomSep     1.5
   LabelType     Centered_Top_Environment
-  LabelString   "<15: ACKNOWLEDGEMENT>"
+  LabelString   "<18: ACKNOWLEDGEMENT>"
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
 End
 
-Style 16:_Abstract
+Style 19:_Abstract
   LatexType     Environment
   LatexName     abstract
   Category      FrontMatter
   BottomSep     1.5
-  Align			Block
+  Align		Block
   LabelType     Centered_Top_Environment
-  LabelString   "<16: ABSTRACT (ENGLISH)>"
+  LabelString   "<19: ABSTRACT (ENGLISH)>"
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
 End
 
-Style 17:_Abstrak_(Malay)
+Style 20:_Abstrak_(Malay)
   LatexType     Environment
   LatexName     abstrak
   Category      FrontMatter
   BottomSep     1.5
-  Align			Block
+  Align		Block
   LabelType     Centered_Top_Environment
-  LabelString   "<17: ABSTRAK (MALAY)>"
+  LabelString   "<20: ABSTRAK (MALAY)>"
   LabelFont
-    Series	    Bold
+    Series	Bold
   EndFont
 End
 
+Style 21:_List_of_Publication
+  LatexType     Environment
+  LatexName     listofpublications
+  Category      FrontMatter
+  TopSep        1
+  BottomSep     1
+  Align		Block
+  LabelType     Centered_Top_Environment
+  LabelString   "<21: List of Publications>"
+  LabelFont
+    Series	Bold
+  EndFont
+End
 
+Style Abbreviation
+  LatexType     Item_Environment
+  LatexName     acronym
+  LatexParam	[]
+  ItemCommand   acro
+  BottomSep     1.5
+  Align			Block
+  LabelType     static_above
+  LabelString   "<18: Abbreviation>" 
+  Category      Acronym
+	Argument item:1
+		LabelString   "Abbreviation"
+		Mandatory  1
+	EndArgument
+	Argument item:2
+		LabelString   "Description"
+		Mandatory  1
+	EndArgument	
+End
+
+Style Symbol
+  LatexType     Item_Environment
+  LatexName     acronym
+  LatexParam	[]
+  ItemCommand   acro
+  BottomSep     1.5
+  Align			Block
+  LabelType     Static_Above
+  LabelString   "<19: Symbol>" 
+  Category      Acronym
+	Argument item:1
+		LabelString   "Name"
+		Mandatory  1
+	EndArgument
+	Argument item:2
+		LabelString   "Symbol"
+		Mandatory  0
+	EndArgument  
+	Argument item:3
+		LabelString   "Description"
+		Mandatory  1
+	EndArgument		
+#  Argument 1
+#    Mandatory 1
+#    LabelString "FirstMandatoryArg"
+#  EndArgument
+#  Argument 2
+#    Mandatory 1
+#    LabelString "SecondMandatoryArg"
+#  EndArgument
+End
+
+Style 21:_TableofContent
+  CopyStyle     11:_Coverpage
+  LatexName     tableofcontents
+  LabelString	"<21: Table of Content>"
+End
+
+Style 22:_ListofTable
+  CopyStyle     11:_Coverpage
+  LatexName     listoftables
+  LabelString	"<22: List of Tables>"
+End
+
+Style 23:_ListofFigures
+  CopyStyle     11:_Coverpage
+  LatexName     listoffigures
+  LabelString	"<23: List of Figures>"
+  BottomSep     1.5
+End
+
+Style 24:_ListofAbbreviation
+  CopyStyle     11:_Coverpage
+  LatexName     listofabbre
+  LabelString	"<24: List of Abbreviations>"
+End
+
+Style 25:_ListofSymbols
+  CopyStyle     11:_Coverpage
+  LatexName     listofsymbols
+  LabelString	"<25: List of Symbols>"
+End
+
+Style 26:_ListofAppendices
+  CopyStyle     11:_Coverpage
+  LatexName     listofappendices
+  LabelString	"<26: List of Appendices>"
+End
+
+Style 27:_Mainmatter
+  CopyStyle     11:_Coverpage
+  LatexName     mainmatter
+  LabelString	"<27: Mainmatter>"
+End
+
+InsetLayout Flex:Abbre
+  LyxType	custom
+  LatexType	command
+#  ForcePlain	1
+  LatexName	ac
+  LabelString	"abbreviation"
+  Font
+    Shape	Italic
+    Size	Large
+    Misc	No_Emph
+    Misc	No_Noun
+    Misc	No_Bar
+  EndFont
+  LabelFont
+    Color	green
+    Size	Tiny
+  EndFont
+	ResetsFont true
+End
+
+Style 28:_List_of_Publications
+  CopyStyle     11:_Coverpage
+  LatexName     listofpublications
+  BottomSep     1.5
+  LabelString	"<28: List_of_Publications>"
+End
+
+Style 29:_EndMatter
+  CopyStyle     11:_Coverpage
+  LatexName     endmatter
+  LabelString	"<29: End Matter>"
+End
