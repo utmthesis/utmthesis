@@ -14,7 +14,7 @@ There are tutorials, tips & examples on how to use LaTeX provided in the downloa
 Download the latest version of utmthesis (both in LaTeX and LyX) here! Due to upload limitation imposed by Google, we could not upload new updates here. Temporarily, we provide download links from FKE Postgraduate Website while we are trying to resolve the upload restriction here.
 
 ## Versions
-Current stable release: version 5.1
+Current stable release: version 6.0
 
 ## Required Software
 1.  A good LaTeX compiler.  For Windows users, you may try MikTeX or ProTeXt. For Linux users, install TeX Live. Note: If you install a minimal/basic version of a Latex compiler, you will face problems. Go for the full download.  For Ubuntu (or Debian based distros) type the following command in your shell to auto-magically install all the above software like a boss:
@@ -23,13 +23,8 @@ Current stable release: version 5.1
 
 2.  A text editor (an advance Notepad) such as TeXstudio or Texmaker or you may try LyX which is extremely user-friendly and provides a WYSWYG-like interface (What You See is What You Get).
 
-## Thesis Printing Guide
-To guarantee that your thesis is properly printed, ensure that the following settings are set in your printer job options:
-
-Paper type : A4 (The paper used for the thesis is A4. Sometimes this is incorrectly set at the printer itself.)
-Page Scaling : None (It is a common mistake to select "Fit to printable area", or "Shrink to printable area", or similar. Leave it at "None".)
-Scale : 100% (This causes the page to zoom in/out. Leave it at 100%.)
-Failing to set these printer job options will result in a printout that is out of scale/margin.
+## Changes in version 6.0
+1.  Adheres to the 2018 UTM format
 
 ## Changes in version 5.1
 1.  The declaration and cover pages depends on the intake year.
