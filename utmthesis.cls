@@ -12,7 +12,7 @@
 % Wan Zuki Azman
 % credits also to other contributors/testers whose names are not listed here
 
-% UTMthesis.cls v6.0 conforms with the 2018 UTM thesis manual.
+% Starting from UTMthesis.cls v6.0, the class conforms with the 2018 UTM thesis manual.
 
 % This project is available in github for contributions from any and all that are interested:
 % https://github.com/utmthesis/utmthesis
@@ -25,8 +25,8 @@
 
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
-\newcommand\@classdate    {2018/10/09}
-\newcommand\@classversion {v6.0}  
+\newcommand\@classdate    {2018/12/28}
+\newcommand\@classversion {v6.1}  
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
 
@@ -130,12 +130,16 @@
 % The 'parskip' package is known to fix these problems.
 \RequirePackage{parskip}
 
-%Needed for optional list of algorithms
+% Needed for optional list of algorithms
 \RequirePackage{algorithm}
 \RequirePackage{enumitem}
 \setlist{leftmargin=0.5in}
 
 \RequirePackage[final]{pdfpages}
+
+% Set to no widow lines 
+\RequirePackage[all]{nowidow}
+\raggedbottom
 
 % [A3] Page margin (left/right: 3.25cm, top/bottom: 2.5cm)
 \RequirePackage[top=2.5cm,left=3.25cm,right=3.25cm,bottom=2.5cm]{geometry}
@@ -1037,14 +1041,17 @@
 % -- English
 \newcommand{\signature@label@en}{Signature}
 \newcommand{\name@label@en}{Name of Supervisor}
+\newcommand{\authname@label@en}{Name}
 \newcommand{\date@label@en}{Date}
 % -- Malay
 \newcommand{\signature@label@ms}{Tandatangan}
 \newcommand{\name@label@ms}{Nama Penyelia}
+\newcommand{\authname@label@ms}{Nama}
 \newcommand{\date@label@ms}{Tarikh}
 % --
 \newcommand{\signature@label}{\getstring{signature@label}}
 \newcommand{\name@label}{\getstring{name@label}}
+\newcommand{\authname@label}{\getstring{authname@label}}
 \newcommand{\date@label}{\getstring{date@label}}
 
 
@@ -1416,7 +1423,7 @@
 
 
 \newcommand{\declaration}{%
-  \clearpage
+  \if@openright\cleardoublepage\else\clearpage\fi
   \section*{\centering\declarationname}
   \phantomsection
   \label{pre:declaration}
@@ -1424,11 +1431,11 @@
   \vspace{1.0cm}
   \vfill
   \noindent\declaration@statement
-  \vspace{1cm} %\zuki edit from -2.5cm to 1cm
+  \vspace{1cm} 
   \begin{center}
     \begin{tabular}{l p{0.4in} @{:} p{0.3in} c}
       \signature@label & & & \\ \cline{4-4}
-      \name@label & & & \@author \\ \cline{4-4}
+      \authname@label & & & \@author \\ \cline{4-4}
       \date@label & & & \@date \\ \cline{4-4}
     \end{tabular}
   \end{center}
@@ -1541,21 +1548,18 @@
   \label{pre:tableofcontents}
   \addcontentsline{toc}{chapter}{\hspace{\toc@tab@a}\MakeUppercase{\contentsname}}  
   \@showpagenumber
-  
-  \begingroup
-    \setlength{\parindent}{0pt}
-%    \begin{flushleft}	
-%  		\bfseries\MakeUppercase{\chapter@colname}\vspace*{-1.07\toc@tab@jumps}
-%    \end{flushleft}
-    \begin{center}		
-		\bfseries\MakeUppercase{\toctitle@colname}\vspace*{-1.15\toc@tab@jumps}
+ 
+  \begingroup 
+    \begin{center}
+      \bfseries\MakeUppercase{%
+        \hspace{3em}\hfill%
+        \toctitle@colname\hfill%
+        \page@colname}
+      \linebreak
     \end{center}
-    \begin{flushright}	
-		\bfseries\MakeUppercase{\page@colname}
-		\linebreak
-    \end{flushright}
-  \endgroup
+  \endgroup   
   \setstretch{1.435}
+  \vspace{-17pt}
   \@starttoc{toc}
 }
 
@@ -1577,16 +1581,13 @@
 
   \begingroup
     \setlength{\parindent}{0pt}
-	\begin{flushleft}	
-		\bfseries\MakeUppercase{\tablenum@colname}\vspace*{-1.07\toc@tab@jumps}
-    \end{flushleft}
-    \begin{center}		
-		\bfseries\MakeUppercase{\title@colname}\vspace*{-1.03\toc@tab@jumps}
+    \begin{center}
+      \bfseries\MakeUppercase{%
+        \tablenum@colname\hfill%
+        \title@colname\hfill\hspace{2.5em}%
+        \page@colname}
+      \linebreak
     \end{center}
-    \begin{flushright}	
-		\bfseries\MakeUppercase{\page@colname}
-		\linebreak
-    \end{flushright}
   \endgroup
   \setstretch{1.435}
   \vspace{-17pt}
@@ -1610,16 +1611,13 @@
 
   \begingroup
     \setlength{\parindent}{0pt}
-    	\begin{flushleft}	
-		\bfseries\MakeUppercase{\figurenum@colname}\vspace*{-1.07\toc@tab@jumps}
-    \end{flushleft}
-    \begin{center}		
-		\bfseries\MakeUppercase{\title@colname}\vspace*{-1.03\toc@tab@jumps}
-    \end{center}
-    \begin{flushright}	
-		\bfseries\MakeUppercase{\page@colname}
-		\linebreak
-    \end{flushright}
+    \begin{center}
+      \bfseries\MakeUppercase{%
+        \figurenum@colname\hfill%
+        \title@colname\hfill\hspace{3em}%
+        \page@colname}
+      \linebreak
+    \end{center}  
   \endgroup
   \setstretch{1.435}
   \vspace{-17pt}
@@ -1674,7 +1672,7 @@
   \phantomsection
   \section*{\centering\listsymbolname}
   \label{pre:listofsymbols}
-  \vspace{0.75cm}
+  \vspace{0.75cm} % for offline, use 0.75. For overleaf, use 1.5 cm
   \addcontentsline{toc}{chapter}{\hspace{\toc@tab@a}\MakeUppercase{\listsymbolname}} 
   \@showpagenumber
   \setstretch{1.435}
@@ -1728,7 +1726,7 @@ $\hspace{\@scsymbol}$
   \phantomsection 
   \section*{\centering\listabbrename}
   \label{pre:listofabbre}
-  \vspace{0.75cm}
+  \vspace{0.75cm} % for offline, use 0.75. For overleaf, use 1.5 cm
   \addcontentsline{toc}{chapter}{\hspace{\toc@tab@a}\MakeUppercase{\listabbrename}} 
   \@showpagenumber
   \setstretch{1.435}
@@ -1783,17 +1781,13 @@ $\hspace{\@scabbre}$
 
   \begingroup
     \setlength{\parindent}{0pt}
-	\begin{flushleft}	
-		\bfseries\MakeUppercase{\appendixnum@colname}\vspace*{-1.07\toc@tab@jumps}
-    \end{flushleft}
-    \begin{center}		
-		\bfseries\MakeUppercase{\title@colname}\vspace*{-1.03\toc@tab@jumps}
-    \end{center}
-    \begin{flushright}
-		\bfseries\MakeUppercase{\page@colname}
-		\linebreak
-    \end{flushright}
-    %\vspace{0.2cm} 
+    \begin{center}
+      \bfseries\MakeUppercase{%
+        \appendixnum@colname\hfill%
+        \title@colname\hfill\hspace{2.5em}%
+        \page@colname}
+      \linebreak
+    \end{center}  
   \endgroup
   \setstretch{1.435}
   \vspace{-17pt}
@@ -1886,6 +1880,7 @@ $\hspace{\@scabbre}$
 % Copied from book.cls:
 % \appendix  - to indicate the start of appendix section
   \renewcommand{\appendix}{%
+  \renewcommand{\theHchapter}{A\arabic{chapter}}
   \@appendixtrue
   \settocdepth{chapter}
   \setcounter{chapter}{0}%
