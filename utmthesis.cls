@@ -12,7 +12,7 @@
 % Wan Zuki Azman
 % credits also to other contributors/testers whose names are not listed here
 
-% Starting from UTMthesis.cls v6.0, the class conforms with the 2018 UTM thesis manual.
+% UTMthesis.cls v6.0 conforms with the 2018 UTM thesis manual.
 
 % This project is available in github for contributions from any and all that are interested:
 % https://github.com/utmthesis/utmthesis
@@ -25,8 +25,8 @@
 
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
-\newcommand\@classdate    {2018/12/28}
-\newcommand\@classversion {v6.1}  
+\newcommand\@classdate    {2019/3/21}
+\newcommand\@classversion {v6.2}  
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
 
@@ -61,6 +61,7 @@
 
 % Declaration of options
 % ======================
+\DeclareOption{oneside}{\PassOptionsToClass{oneside}{book}}
 \DeclareOption{final}{\PassOptionsToClass{final}{book}}
 \DeclareOption{draft}{\PassOptionsToClass{draft}{book}}
 \DeclareOption{english}{\@initializeThesisAsEnglish}
@@ -115,7 +116,7 @@
 % ---------------------------------------------------------
 
 %default twoside printing
-\LoadClass[a4paper,twoside,12pt,onecolumn]{book}
+\LoadClass[a4paper,12pt,onecolumn]{book}
 
 % To allow ToC level changes
 \RequirePackage{tocvsec2}
@@ -158,8 +159,8 @@
 % Externalized string  - Caption labels
 % +++++++++++++++++++++
 % -- English
-\newcommand{\tablename@en}		{Table}
-\newcommand{\figurename@en}		{Figure}
+\newcommand{\tablename@en}		    {Table}
+\newcommand{\figurename@en}		    {Figure}
 \newcommand{\algorithmname@en}		{Algorithm}
 \newcommand{\tablelistname@en}    	{Table}
 \newcommand{\figurelistname@en}   	{Figure}
@@ -174,10 +175,10 @@
 % --
 \renewcommand{\tablename}     		{\getstring{tablename}}
 \renewcommand{\figurename}    		{\getstring{figurename}}
-\floatname{algorithm}		  	{\getstring{algorithmname}}
+\floatname{algorithm}		  	    {\getstring{algorithmname}}
 \newcommand{\tablelistname}     	{\getstring{tablelistname}}
 \newcommand{\figurelistname}    	{\getstring{figurelistname}}
-\floatname{algorithmlist}		{\getstring{algorithmlistname}}
+\floatname{algorithmlist}	    	{\getstring{algorithmlistname}}
 
 % +++++++++++++++++++++
 % Externalized string  - Heading labels
@@ -1281,13 +1282,13 @@
    		\ifx\@supervisorfour\@empty
    			\ifx\@supervisorthree\@empty
        				\ifx\@supervisortwo\@empty
-         				\begin{tabular}{l p{0.4in} @{:} b{0.3in} l}
+         				\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
                 				\signature@label & & & \\ \cline{4-4}
                 				\name@label & & & \@supervisorone \\ 
                 				\date@label & & & \@date \\ 
            				\end{tabular}
        				\else
-            				\begin{tabular}{l p{0.4in} @{:} b{0.3in} l}
+            				\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
                 				\signature@label & & & \\ \cline{4-4}
                 				\name@label \space 1 & & & \@supervisorone \\ 
                 				\date@label & & & \@date \\ 
@@ -1672,7 +1673,7 @@
   \phantomsection
   \section*{\centering\listsymbolname}
   \label{pre:listofsymbols}
-  \vspace{0.75cm} % for offline, use 0.75. For overleaf, use 1.5 cm
+  \vspace{1.5cm}
   \addcontentsline{toc}{chapter}{\hspace{\toc@tab@a}\MakeUppercase{\listsymbolname}} 
   \@showpagenumber
   \setstretch{1.435}
@@ -1726,7 +1727,7 @@ $\hspace{\@scsymbol}$
   \phantomsection 
   \section*{\centering\listabbrename}
   \label{pre:listofabbre}
-  \vspace{0.75cm} % for offline, use 0.75. For overleaf, use 1.5 cm
+  \vspace{1.5cm}
   \addcontentsline{toc}{chapter}{\hspace{\toc@tab@a}\MakeUppercase{\listabbrename}} 
   \@showpagenumber
   \setstretch{1.435}
@@ -1922,3 +1923,4 @@ the#1\endcsname\quad}}
 
 %% Default plain pagestyle to make all page numbers be at bottom centre 
 \pagestyle{plain}
+

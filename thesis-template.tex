@@ -1,15 +1,20 @@
-\documentclass[twoside]{utmthesis}
+\documentclass[oneside]{utmthesis}
+%By default, print on two-side, can change to oneside printing 
 %According to the new manual, should not mixed single-side with two-side printing
+
 \usepackage{graphicx}
 \usepackage{url} 
-\usepackage[pages=some]{background}
-\usepackage{lipsum}
+%\usepackage[pages=some]{background}
+%\usepackage{lipsum}
 \usepackage{pdflscape}
 
 %%% You MUST load the natbib package if you want to use author-date bibliography style. Also remember to change the bibliography style at the bottom of the .tex file.
 % Comment natbib for citation by number
 %\usepackage{natbib}
 %\let\cite\citep
+
+%This is to make sure vertical spacing non-stretchable
+\raggedbottom
 
 \begin{document}
 
@@ -83,6 +88,7 @@ Pustaka (\url{http://prpm.dbp.gov.my/}).
 \addabbre{ANN}{Artificial Neural Network}
 \addabbre{PC}{Personal Computer}
 \addabbre{SVM}{Support Vector Machine}
+\addabbre{UTM}{Universiti Teknologi Malaysia}
 \addabbre{XML}{Extensible Markup Language}
 
 
@@ -102,7 +108,7 @@ Pustaka (\url{http://prpm.dbp.gov.my/}).
 
 \chapter{Introduction}
 
-This template conforms with the \ac{UTM} 2018 new requirement \cite{utm:thesis:manual}.
+This template conforms with the Universiti Teknologi Malaysia 2018 new requirement \cite{utm:thesis:manual}.
 Students who wish to learn more on LyX should refer to documentations
 available here \cite{lyx:download}. You do not need to know deep
 on LaTeX \cite{latex:wikibook} to use this LyX template.
@@ -291,7 +297,7 @@ environment, procedure, limitations, assumptions, range of validity)
 \end{itemize}
 \end{itemize}
 
-\subsection{Validation of hyposthesis}
+\subsection{Validation of hypothesis}
 \begin{itemize}
 \item Usually titled as Result and Discussion
 \item Describe experiment details that provide evidence in support of your
@@ -407,7 +413,7 @@ page
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.5\linewidth]{./figs/utm02}
-	\caption{Example of a figure. This is a long, very long, long long, long caption.  You can give a shorter caption for the ``list of figures" using the square braket symbol.}
+	\caption{Example of a figure. This is a long, very long, long long, long caption.  You can give a shorter caption for the ``list of figures" using the square bracket symbol.}
 \end{figure}
 
 
@@ -460,7 +466,6 @@ page
 \section{Research Outcomes}
 \section{Contributions to Knowledge}
 \section{Future Works}
-
 
 %select one
 %Use authordate with natbib, comment if using numbering
