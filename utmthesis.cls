@@ -25,8 +25,8 @@
 
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
-\newcommand\@classdate    {2019/3/21}
-\newcommand\@classversion {v6.2}  
+\newcommand\@classdate    {2019/05/05}
+\newcommand\@classversion {v6.3}  
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
 
