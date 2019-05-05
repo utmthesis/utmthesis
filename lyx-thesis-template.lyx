@@ -4120,105 +4120,6 @@ options "utmthesis-numbering"
 
 \end_layout
 
-\begin_layout Standard
-\noindent
-\align left
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-List of Publications
-\end_layout
-
-\begin_layout Itemize
-Categorize according to publication types.
- 
-\end_layout
-
-\begin_layout Itemize
-For co-authored publications, group them as 
-\begin_inset Quotes eld
-\end_inset
-
-Other Publications
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout 28: List of Publications
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing single
-\noindent
-
-\series bold
-Journal with Impact Factor
-\end_layout
-
-\begin_layout Enumerate
-Paper 1
-\end_layout
-
-\begin_layout Enumerate
-Paper 2
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing single
-
-\series bold
-Indexed Journal (SCOPUS)
-\end_layout
-
-\begin_layout Enumerate
-Paper 3
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing single
-\noindent
-
-\series bold
-Non-Indexed Journal
-\end_layout
-
-\begin_layout Enumerate
-Paper 4
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing single
-\noindent
-
-\series bold
-Indexed conference proceedings
-\end_layout
-
-\begin_layout Enumerate
-Paper 5
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing single
-\noindent
-
-\series bold
-Non-Indexed conference proceedings
-\end_layout
-
-\begin_layout Enumerate
-Paper 6
-\end_layout
-
 \begin_layout Chapter
 \start_of_appendix
 Using LyX on rollApp Thesis title should be a concise description of the
@@ -4300,17 +4201,105 @@ Connect the GoogleDrive to rollApp
 \end_layout
 
 \begin_layout Itemize
-Now, you can access LyX online
+Now, you can access LyX onlin
+\end_layout
+
+\begin_layout 28: List of Publications
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename figs/rollapp-3.jpg
-	width 100text%
+\noindent
+\align left
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+List of Publications
+\end_layout
+
+\begin_layout Itemize
+Categorize according to publication types.
+\end_layout
+
+\begin_layout Itemize
+For co-authored publications, group them as 
+\begin_inset Quotes eld
+\end_inset
+
+Other Publications
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+
+\series bold
+Journal with Impact Factor
+\end_layout
+
+\begin_layout Enumerate
+Paper 1
+\end_layout
+
+\begin_layout Enumerate
+Paper 2
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+
+\series bold
+Indexed Journal (SCOPUS)
+\end_layout
+
+\begin_layout Enumerate
+Paper 3
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+
+\series bold
+Non-Indexed Journal
+\end_layout
+
+\begin_layout Enumerate
+Paper 4
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+
+\series bold
+Indexed conference proceedings
+\end_layout
+
+\begin_layout Enumerate
+Paper 5
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+
+\series bold
+Non-Indexed conference proceedings
+\end_layout
+
+\begin_layout Enumerate
+Paper 6
 \end_layout
 
 \begin_layout Standard

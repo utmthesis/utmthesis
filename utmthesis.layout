@@ -580,7 +580,7 @@ End
 Style 28:_List_of_Publications
   CopyStyle     11:_Coverpage
   LatexName     listofpublications
-  BottomSep     1.5
+  TopSep     	2.5
   LabelString	"<28: List_of_Publications>"
 End
 

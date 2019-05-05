@@ -12,7 +12,7 @@
 % Wan Zuki Azman
 % credits also to other contributors/testers whose names are not listed here
 
-% UTMthesis.cls v6.0 conforms with the 2018 UTM thesis manual.
+% UTMthesis.cls v6.2 conforms with the 2018 UTM thesis manual.
 
 % This project is available in github for contributions from any and all that are interested:
 % https://github.com/utmthesis/utmthesis
@@ -159,8 +159,8 @@
 % Externalized string  - Caption labels
 % +++++++++++++++++++++
 % -- English
-\newcommand{\tablename@en}		    {Table}
-\newcommand{\figurename@en}		    {Figure}
+\newcommand{\tablename@en}		{Table}
+\newcommand{\figurename@en}		{Figure}
 \newcommand{\algorithmname@en}		{Algorithm}
 \newcommand{\tablelistname@en}    	{Table}
 \newcommand{\figurelistname@en}   	{Figure}
@@ -175,10 +175,10 @@
 % --
 \renewcommand{\tablename}     		{\getstring{tablename}}
 \renewcommand{\figurename}    		{\getstring{figurename}}
-\floatname{algorithm}		  	    {\getstring{algorithmname}}
+\floatname{algorithm}		  	{\getstring{algorithmname}}
 \newcommand{\tablelistname}     	{\getstring{tablelistname}}
 \newcommand{\figurelistname}    	{\getstring{figurelistname}}
-\floatname{algorithmlist}	    	{\getstring{algorithmlistname}}
+\floatname{algorithmlist}		{\getstring{algorithmlistname}}
 
 % +++++++++++++++++++++
 % Externalized string  - Heading labels
@@ -1290,68 +1290,68 @@
        				\else
             				\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
                 				\signature@label & & & \\ \cline{4-4}
-                				\name@label \space 1 & & & \@supervisorone \\ 
+                				\name@label \space I & & & \@supervisorone \\ 
                 				\date@label & & & \@date \\ 
                 				\\
                 				\signature@label & & & \\ \cline{4-4}
-                				\name@label \space 2 & & & \@supervisortwo \\ 
+                				\name@label \space II & & & \@supervisortwo \\ 
                 				\date@label & & & \@date \\ 
             				\end{tabular}
         			\fi
     			\else
  				\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
   					\signature@label & & & \\ \cline{4-4}
-    					\name@label \space 1 & & & \@supervisorone \\ 
+    					\name@label \space I & & & \@supervisorone \\ 
     					\date@label & & & \@date \\ 
     					\\
     					\signature@label & & & \\ \cline{4-4}
-    					\name@label \space 2 & & & \@supervisortwo \\ 
+    					\name@label \space II & & & \@supervisortwo \\ 
     					\date@label & & & \@date \\ \
     					\\
     					\signature@label & & & \\ \cline{4-4}
-    					\name@label \space 3 & & & \@supervisorthree \\ 
+    					\name@label \space III & & & \@supervisorthree \\ 
     					\date@label & & & \@date \\ 
     				\end{tabular}
     			\fi
     		\else
  			\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
     				\signature@label & & & \\ \cline{4-4}
-    				\name@label \space 1 & & & \@supervisorone \\ 
+    				\name@label \space I & & & \@supervisorone \\ 
     				\date@label & & & \@date \\ 
     				\\
     				\signature@label & & & \\ \cline{4-4}
-    				\name@label \space 2 & & & \@supervisortwo \\ 
+    				\name@label \space II & & & \@supervisortwo \\ 
     				\date@label & & & \@date \\ \
     				\\
     				\signature@label & & & \\ \cline{4-4}
-    				\name@label \space 3 & & & \@supervisorthree \\ 
+    				\name@label \space III & & & \@supervisorthree \\ 
     				\date@label & & & \@date \\ 
     				\\
     				\signature@label & & & \\ \cline{4-4}
-    				\name@label \space 4 & & & \@supervisorfour \\ 
+    				\name@label \space IV & & & \@supervisorfour \\ 
     				\date@label & & & \@date \\
     			\end{tabular}
     		\fi
     	\else
   		\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space 1 & & & \@supervisorone \\ 
+    			\name@label \space I & & & \@supervisorone \\ 
     			\date@label & & & \@date \\
     			\\
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space 2 & & & \@supervisortwo \\
+    			\name@label \space II & & & \@supervisortwo \\
     			\date@label & & & \@date \\ 
     			\\
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space 3 & & & \@supervisorthree \\ 
+    			\name@label \space III & & & \@supervisorthree \\ 
     			\date@label & & & \@date \\ \
     			\\
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space 4 & & & \@supervisorfour \\
+    			\name@label \space IV & & & \@supervisorfour \\
     			\date@label & & & \@date \\ 
     			\\
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space 5 & & & \@supervisorfive \\ 
+    			\name@label \space V & & & \@supervisorfive \\ 
     			\date@label & & & \@date \\ 
     		\end{tabular}
     	\fi
