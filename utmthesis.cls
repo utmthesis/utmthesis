@@ -12,7 +12,7 @@
 % Wan Zuki Azman
 % credits also to other contributors/testers whose names are not listed here
 
-% UTMthesis.cls v6.2 conforms with the 2018 UTM thesis manual.
+% UTMthesis.cls v6.3 conforms with the 2018 UTM thesis manual.
 
 % This project is available in github for contributions from any and all that are interested:
 % https://github.com/utmthesis/utmthesis
@@ -359,7 +359,7 @@
       \@latex@warning{\@classname: \@backslashchar award valid value is 1-8}
       \def\@award{5}% default to PhD
     \fi
-    \ifnum \@award >7
+    \ifnum \@award >9
       \@latex@warning{\@classname: \@backslashchar award valid valid is 1-8}
       \def\@award{5}% default to PhD
     \fi
@@ -480,6 +480,8 @@
 % =================
 %  TOC Formatting
 % -----------------
+\RequirePackage[titles]{tocloft}
+
 \def\toclevel@nonmainmatterchapter{0}
 \def\toclevel@appendixchapter{1}
 
@@ -559,46 +561,18 @@
 
 
 % Format entries in \listoffigures, \listoftables and \listofappendices
+\renewcommand{\cftfigdotsep}{\cftnodots}
+\renewcommand{\cfttabdotsep}{\cftnodots}
+\setlength{\cftfigindent}{0em}
+\setlength{\cfttabindent}{0em}
+\setlength{\cftfignumwidth}{\toc@sep@a}
+\setlength{\cfttabnumwidth}{\toc@sep@a}
 
-% This did not worked on TeXlive
-% After ToC (List of Figures, Tables, etc)
-%\RequirePackage{etoolbox} 
-%\patchcmd{\@caption}{\csname the#1\endcsname}{\csname fnum@#1\endcsname}{}{} 
+\newcommand*\l@appendix{\@dottedtocline{1}{\toc@sep@figs}{\toc@sep@figstitle}}
+\newcommand*\l@algorithm{\@dottedtocline{1}{\toc@sep@figs}{\toc@sep@figstitle}}
 
-
-%Another workaround using caption package
-\RequirePackage[labelsep=quad,aboveskip=5pt,belowskip=5pt,labelformat=simple]{caption}
-%
-\renewcommand*\l@figure{\@dottedtocline{1}{\toc@sep@figs}{\toc@sep@figstitle}} 
-\DeclareCaptionListFormat{figurenew}{\figurelistname~#1 #2}%
-\captionsetup[figure]{listformat=figurenew}
-%
-\renewcommand*\l@table{\@dottedtocline{1}{\toc@sep@figs}{\toc@sep@figstitle}} 
-\DeclareCaptionListFormat{tablenew}{\tablelistname~#1 #2}%
-\captionsetup[table]{listformat=tablenew}
-%
-\let\l@appendix\l@figure
-\let\l@algorithm\l@figure
-
-% This is not needed anymore
-% Format non-mainmatter chapter in TOC
-% (i.e. headings in frontmatter, and 'References', 'Appendices' headings)
-% Modified based on \l@chapter
-%
-%\newcommand*\l@nonmainmatterchapter[2]{%
-%  \ifnum \c@tocdepth >\m@ne
-%    \setlength\@tempdima{\toc@sep@a}% set \numberline{} width
-%    \begingroup
-%      \parindent \toc@sep@chap 
-%      \rightskip \@pnumwidth
-%      \parfillskip -\@pnumwidth
-%      \leavevmode \bfseries
-%      \advance\leftskip\@tempdima
-%      \hskip -\leftskip
-%      \hspace{\@tempdima}% since no \numberline{}, put a blank space here
-%      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss \textbf\MakeUppercase{#2}}\par 
-%    \endgroup
-%  \fi}
+\renewcommand\cftfigpresnum{\figurelistname~}
+\renewcommand\cfttabpresnum{\tablelistname~}
 
 % Copied from book.cls:
 %   \l@chapter  - format chapter in TOC
@@ -1011,16 +985,12 @@
     	\fi
 
     \vspace{\stretch{1}}
-    \ifnum \@award=7
-    		School of Graduate Studies\\
+    \ifx\@school\@empty 
+    	\relax
     \else
-    		\ifx\@school\@empty 
-              \relax
-            \else
-              \@school\\
-            \fi     
-    		\@faculty\\
-    	\fi
+        \@school\\
+    \fi     
+    \@faculty\\
     Universiti Teknologi Malaysia\\
     % changed to 2 to follow the manual
     \vspace{\stretch{2}}
@@ -1271,13 +1241,12 @@
     \phantomsection 
     \@hidepagenumber
     \pdfbookmark[1]{SUPERVISOR(S) DECLARATION}{pre:svdeclaration}
-    \vspace*{-3.5cm}
-    \vfill
-        \begin{center}
-    \super@statement
-        \end{center}
-        \par\noindent
-        \vspace*{0cm}
+    \vspace*{\fill}
+    \begin{center}
+    	\super@statement
+    \end{center}
+    \par\noindent
+    \vspace*{0cm}
 	\ifx\@supervisorfive\@empty
    		\ifx\@supervisorfour\@empty
    			\ifx\@supervisorthree\@empty
@@ -1361,18 +1330,23 @@
 % ========================================
 %      [P4] Cooperation Declaration
 % ----------------------------------------
+% The cooperation declaration form is only by research degree.
 \newcommand{\certification}{
-  \if@openright\cleardoublepage\else\clearpage\fi 
-  \phantomsection 
-  \pdfbookmark[1]{COOPERATION DECLARATION}{pre:cooperationdeclaration}
-  \@hidepagenumber
-  % For now, just notify the student to attach the Cooperation Declaration here.
-  \null\vspace{-2.5cm}
-  \null\vfill
-  \begin{center}
-    \textit{Replace this page with the Cooperation Declaration form, which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} when your research is done in collaboration with other institutions that requires their consent to publish the finding in this document.}
-  \end{center}
-  \vfill
+	\ifnum \@award>3
+		\ifnum \@award<8
+  			\if@openright\cleardoublepage\else\clearpage\fi 
+			\phantomsection 
+  			\pdfbookmark[1]{COOPERATION DECLARATION}{pre:cooperationdeclaration}
+  			\@hidepagenumber
+ 	 		% For now, just notify the student to attach the Cooperation Declaration here.
+  			\null\vspace{-2.5cm}
+  			\null\vfill
+  			\begin{center}
+    				\textit{Replace this page with the Cooperation Declaration form, which can be obtained from SPS or your faculty. This page is \textbf{OPTIONAL} when your research is done in collaboration with other institutions that requires their consent to publish the finding in this document.}
+  			\end{center}
+  			\vfill
+		\fi
+	\fi
 }
 
 
@@ -1479,7 +1453,7 @@
 %            [P9] Abstract
 % ----------------------------------------
 \newenvironment{abstract}{%
-  \clearpage  
+  \if@openright\cleardoublepage\else\clearpage\fi  
   \phantomsection 
   \section*{\centering\abstractname}
   \vspace{20pt}
@@ -1889,7 +1863,7 @@ $\hspace{\@scabbre}$
   \gdef\@chapapp{\appendixname}%
   \gdef\thechapter{\@Alph\c@chapter}
   \phantomsection
-  \addtocontents{toc}{\protect\vspace{\@twolinespacing}}
+  %\addtocontents{toc}{\protect\vspace{\@twolinespacing}}
   %\addtocontents{toc}{\protect\noindent\MakeUppercase{\bf\appendicesname}}
   %\addtocontents{toc}{\protect\addvspace{\@twolinespacing}}%
 }

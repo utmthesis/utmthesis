@@ -1,4 +1,4 @@
-\documentclass{utmthesis}
+\documentclass[oneside]{utmthesis}
 %By default, print on two-side, can change to oneside printing 
 %According to the new manual, should not mixed single-side with two-side printing
 
@@ -7,6 +7,7 @@
 %\usepackage[pages=some]{background}
 %\usepackage{lipsum}
 \usepackage{pdflscape}
+\usepackage{longtable}
 
 %%% You MUST load the natbib package if you want to use author-date bibliography style. Also remember to change the bibliography style at the bottom of the .tex file.
 % Comment natbib for citation by number
@@ -461,6 +462,75 @@ page
 \end{table}
 \end{landscape}
 
+\begin{center}
+\begin{longtable}{|l|l|l|}
+\caption{Feasible triples for highly variable Grid, MLMMH. Can include some context information (e.g. development software, test environment, procedure, limitations, assumptions, range of validity}
+\label{grid_mlmmh} \\
+
+\hline \multicolumn{1}{|c|}{\textbf{Time (s)}} & \multicolumn{1}{c|}{\textbf{Triple chosen}} & \multicolumn{1}{c|}{\textbf{Other feasible triples}} \\ \hline 
+\endfirsthead
+
+\multicolumn{3}{c}%
+{{\tablename\ \thetable{} -- continued from previous page}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Time (s)}} &
+\multicolumn{1}{c|}{\textbf{Triple chosen}} &
+\multicolumn{1}{c|}{\textbf{Other feasible triples}} \\ \hline 
+\endhead
+
+\hline \multicolumn{3}{r}{{Continued on next page}} \\ 
+\endfoot
+
+\hline \hline
+\endlastfoot
+
+0 & (1, 11, 13725) & (1, 12, 10980), (1, 13, 8235), (2, 2, 0), (3, 1, 0) \\
+2745 & (1, 12, 10980) & (1, 13, 8235), (2, 2, 0), (2, 3, 0), (3, 1, 0) \\
+5490 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+8235 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+10980 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+13725 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+16470 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+19215 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+21960 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+24705 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+27450 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+30195 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
+32940 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+35685 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+38430 & (1, 13, 10980) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+41175 & (1, 12, 13725) & (1, 13, 10980), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+43920 & (1, 13, 10980) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+46665 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
+49410 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
+52155 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+54900 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+57645 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+60390 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+63135 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+65880 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+68625 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
+71370 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+74115 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+76860 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+79605 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+82350 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+85095 & (1, 12, 13725) & (1, 13, 10980), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+87840 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+90585 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+93330 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+96075 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+98820 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+101565 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+104310 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+107055 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+109800 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+112545 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+115290 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+118035 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+120780 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+123525 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
+\end{longtable}
+\end{center}
 
 \chapter{Conclusion}
 \section{Research Outcomes}
@@ -504,6 +574,7 @@ Some data
 \begin{enumerate}
 \item Paper 6
 \end{enumerate}
+
 %This is required to make List of Appendices possible. Remove when have no appendix.
 \endmatter
 \end{document}
