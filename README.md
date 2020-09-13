@@ -14,7 +14,7 @@ There are tutorials, tips & examples on how to use LaTeX provided in the downloa
 Download the latest version of utmthesis (both in LaTeX and LyX) here! Due to upload limitation imposed by Google, we could not upload new updates here. Temporarily, we provide download links from FKE Postgraduate Website while we are trying to resolve the upload restriction here.
 
 ## Versions
-Current stable release: version 6.1
+Current stable release: version 6.2
 
 ## Required Software
 1.  A good LaTeX compiler.  For Windows users, you may try MikTeX or ProTeXt. For Linux users, install TeX Live. Note: If you install a minimal/basic version of a Latex compiler, you will face problems. Go for the full download.  For Ubuntu (or Debian based distros) type the following command in your shell to auto-magically install all the above software like a boss:
@@ -22,6 +22,15 @@ Current stable release: version 6.1
     sudo apt-get install texlive-full texmaker jabref
 
 2.  A text editor (an advance Notepad) such as TeXstudio or Texmaker or you may try LyX which is extremely user-friendly and provides a WYSWYG-like interface (What You See is What You Get).
+
+## Changes in version 6.3
+1. Spervisor declaration page changed to use Roman numerals for multiple supervisors
+2. Tex to put list of publications to after Appendix.
+3. Ditto for *.lyx and *.layout
+
+## Changes in version 6.2
+1. Supports single-side printing
+2. Bug corrected for the p{length} was written as b{length}
 
 ## Changes in version 6.1
 1. Fixed minor bugs with the declaration pages.   
