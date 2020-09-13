@@ -24,7 +24,7 @@ Current stable release: version 6.3
 2.  A text editor (an advance Notepad) such as TeXstudio or Texmaker or you may try LyX which is extremely user-friendly and provides a WYSWYG-like interface (What You See is What You Get).
 
 ## Changes in version 6.3
-1. Spervisor declaration page changed to use Roman numerals for multiple supervisors
+1. Supervisor declaration page changed to use Roman numerals for multiple supervisors
 2. Tex to put list of publications to after Appendix.
 3. Ditto for *.lyx and *.layout
 
