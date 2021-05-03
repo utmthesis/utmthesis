@@ -12,7 +12,7 @@
 % Wan Zuki Azman
 % credits also to other contributors/testers whose names are not listed here
 
-% UTMthesis.cls v6.3 conforms with the 2018 UTM thesis manual.
+% UTMthesis.cls v6.4 conforms with the 2018 UTM thesis manual.
 
 % This project is available in github for contributions from any and all that are interested:
 % https://github.com/utmthesis/utmthesis
@@ -25,11 +25,11 @@
 
 \newcommand\@classname    {utmthesis}
 \newcommand\@classabout   {Class File for Universiti Teknologi Malaysia Thesis Writing}
-\newcommand\@classdate    {2019/05/05}
-\newcommand\@classversion {v6.3}  
+\newcommand\@classdate    {2021/05/02}
+\newcommand\@classversion {v6.4}  
 \ProvidesClass{\@classname}[\@classdate\space\@classversion\space\@classabout]
 
-
+\RequirePackage{ifplatform}
 \RequirePackage{acronym}
 \RequirePackage{emptypage}
 \RequirePackage{newtxtext,newtxmath}
@@ -555,9 +555,9 @@
 %   \@dottedtocline {heading level}{left indent}{numbering label's width}
 
 % Format section, subsection and subsubsection in TOC
-\renewcommand*\l@section{\@dottedtocline{1}{\toc@tab@a}{\toc@sep@b}}
-\renewcommand*\l@subsection{\@dottedtocline{2}{\toc@tab@b}{\toc@sep@c}}
-\renewcommand*\l@subsubsection{\@dottedtocline{3}{\toc@tab@c}{\toc@sep@d}}
+\renewcommand*\l@section{\@dottedtocline{1}{4.5em}{2.45em}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{\toc@tab@a}{\toc@sep@b}}
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{\toc@tab@b}{\toc@sep@c}}
 
 
 % Format entries in \listoffigures, \listoftables and \listofappendices
@@ -567,6 +567,9 @@
 \setlength{\cfttabindent}{0em}
 \setlength{\cftfignumwidth}{\toc@sep@a}
 \setlength{\cfttabnumwidth}{\toc@sep@a}
+
+%Format caption of tables
+\RequirePackage[labelsep=quad,aboveskip=5pt,belowskip=5pt,labelformat=simple]{caption}
 
 \newcommand*\l@appendix{\@dottedtocline{1}{\toc@sep@figs}{\toc@sep@figstitle}}
 \newcommand*\l@algorithm{\@dottedtocline{1}{\toc@sep@figs}{\toc@sep@figstitle}}
@@ -792,19 +795,41 @@
 %                {afterskip} % must be positive to prevent run-in heading
 %                {styles}
 %
-\renewcommand\section{\@startsection {section}{1}{0pt}%
-                                     {\@twolinespacing}%
-                                     {\@tinyskip}%
-                                     {\normalfont\normalsize\bfseries}}
-\renewcommand\subsection{\@startsection {subsection}{2}{0pt}%
-                                     {\@twolinespacing}%
-                                     {\@tinyskip}%
-                                     {\normalfont\normalsize\bfseries}}
+\ifwindows 
+	\renewcommand\section{\@startsection {section}{1}{0pt}%
+	                                     {2\@twolinespacing}%
+	                                     {\@twolinespacing}%
+	                                     {\normalfont\normalsize\bfseries}}
+\else
+	\renewcommand\section{\@startsection {section}{1}{0pt}%
+	                                     {\@twolinespacing}%
+	                                     {\@tinyskip}%
+	                                     {\normalfont\normalsize\bfseries}}
+\fi
 
-\renewcommand\subsubsection{\@startsection {subsubsection}{3}{0pt}%
-                                     {\@twolinespacing}%
-                                     {\@tinyskip}%
-                                     {\normalfont\normalsize\bfseries}}
+\ifwindows 
+	\renewcommand\subsection{\@startsection {subsection}{2}{0pt}%
+	                                     {2\@twolinespacing}%
+	                                     {\@twolinespacing}%
+	                                     {\normalfont\normalsize\bfseries}}
+\else
+	\renewcommand\subsection{\@startsection {subsection}{2}{0pt}%
+	                                     {\@twolinespacing}%
+	                                     {\@tinyskip}%
+	                                     {\normalfont\normalsize\bfseries}}
+\fi
+
+\ifwindows
+	\renewcommand\subsubsection{\@startsection {subsubsection}{3}{0pt}%
+	                                     {2\@twolinespacing}%
+	                                     {\@twolinespacing}%
+	                                     {\normalfont\normalsize\bfseries}}
+\else
+	\renewcommand\subsubsection{\@startsection {subsubsection}{3}{0pt}%
+	                                     {\@twolinespacing}%
+	                                     {\@tinyskip}%
+	                                     {\normalfont\normalsize\bfseries}}
+\fi
 
 % [D8] 2-line spacing between last-line of text & table/figure/illustration
 % --------------------------------------------------------------------
@@ -1253,75 +1278,75 @@
        				\ifx\@supervisortwo\@empty
          				\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
                 				\signature@label & & & \\ \cline{4-4}
-                				\name@label & & & \@supervisorone \\ 
-                				\date@label & & & \@date \\ 
+                				\name@label & & & \MakeUppercase{\@supervisorone} \\ 
+                				\date@label & & & \MakeUppercase{\@date} \\ 
            				\end{tabular}
        				\else
             				\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
                 				\signature@label & & & \\ \cline{4-4}
-                				\name@label \space I & & & \@supervisorone \\ 
-                				\date@label & & & \@date \\ 
+                				\name@label \space I & & & \MakeUppercase{\@supervisorone} \\ 
+                				\date@label & & & \MakeUppercase{\@date} \\ 
                 				\\
                 				\signature@label & & & \\ \cline{4-4}
-                				\name@label \space II & & & \@supervisortwo \\ 
-                				\date@label & & & \@date \\ 
+                				\name@label \space II & & & \MakeUppercase{\@supervisortwo} \\ 
+                				\date@label & & & \MakeUppercase{\@date} \\ 
             				\end{tabular}
         			\fi
     			\else
  				\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
   					\signature@label & & & \\ \cline{4-4}
-    					\name@label \space I & & & \@supervisorone \\ 
-    					\date@label & & & \@date \\ 
+    					\name@label \space I & & & \MakeUppercase{\@supervisorone} \\ 
+    					\date@label & & & \MakeUppercase{\@date} \\ 
     					\\
     					\signature@label & & & \\ \cline{4-4}
-    					\name@label \space II & & & \@supervisortwo \\ 
-    					\date@label & & & \@date \\ \
+    					\name@label \space II & & & \MakeUppercase{\@supervisortwo} \\ 
+    					\date@label & & & \MakeUppercase{\@date} \\ \
     					\\
     					\signature@label & & & \\ \cline{4-4}
-    					\name@label \space III & & & \@supervisorthree \\ 
-    					\date@label & & & \@date \\ 
+    					\name@label \space III & & & \MakeUppercase{\@supervisorthree} \\ 
+    					\date@label & & & \MakeUppercase{\@date} \\ 
     				\end{tabular}
     			\fi
     		\else
  			\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
     				\signature@label & & & \\ \cline{4-4}
-    				\name@label \space I & & & \@supervisorone \\ 
-    				\date@label & & & \@date \\ 
+    				\name@label \space I & & & \MakeUppercase{\@supervisorone} \\ 
+    				\date@label & & & \MakeUppercase{\@date} \\ 
     				\\
     				\signature@label & & & \\ \cline{4-4}
-    				\name@label \space II & & & \@supervisortwo \\ 
-    				\date@label & & & \@date \\ \
+    				\name@label \space II & & & \MakeUppercase{\@supervisortwo} \\ 
+    				\date@label & & & \MakeUppercase{\@date} \\ \
     				\\
     				\signature@label & & & \\ \cline{4-4}
-    				\name@label \space III & & & \@supervisorthree \\ 
-    				\date@label & & & \@date \\ 
+    				\name@label \space III & & & \MakeUppercase{\@supervisorthree} \\ 
+    				\date@label & & & \MakeUppercase{\@date} \\ 
     				\\
     				\signature@label & & & \\ \cline{4-4}
-    				\name@label \space IV & & & \@supervisorfour \\ 
-    				\date@label & & & \@date \\
+    				\name@label \space IV & & & \MakeUppercase{\@supervisorfour} \\ 
+    				\date@label & & & \MakeUppercase{\@date} \\
     			\end{tabular}
     		\fi
     	\else
   		\begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space I & & & \@supervisorone \\ 
-    			\date@label & & & \@date \\
+    			\name@label \space I & & & \MakeUppercase{\@supervisorone} \\ 
+    			\date@label & & & \MakeUppercase{\@date} \\
     			\\
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space II & & & \@supervisortwo \\
-    			\date@label & & & \@date \\ 
+    			\name@label \space II & & & \MakeUppercase{\@supervisortwo} \\
+    			\date@label & & & \MakeUppercase{\@date} \\ 
     			\\
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space III & & & \@supervisorthree \\ 
-    			\date@label & & & \@date \\ \
+    			\name@label \space III & & & \MakeUppercase{\@supervisorthree} \\ 
+    			\date@label & & & \MakeUppercase{\@date} \\ \
     			\\
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space IV & & & \@supervisorfour \\
-    			\date@label & & & \@date \\ 
+    			\name@label \space IV & & & \MakeUppercase{\@supervisorfour} \\
+    			\date@label & & & \MakeUppercase{\@date} \\ 
     			\\
     			\signature@label & & & \\ \cline{4-4}
-    			\name@label \space V & & & \@supervisorfive \\ 
-    			\date@label & & & \@date \\ 
+    			\name@label \space V & & & \MakeUppercase{\@supervisorfive} \\ 
+    			\date@label & & & \MakeUppercase{\@date} \\ 
     		\end{tabular}
     	\fi
   \vfill
@@ -1408,10 +1433,10 @@
   \noindent\declaration@statement
   \vspace{1cm} 
   \begin{center}
-    \begin{tabular}{l p{0.4in} @{:} p{0.3in} c}
+    \begin{tabular}{l p{0.4in} @{:} p{0.3in} l}
       \signature@label & & & \\ \cline{4-4}
-      \authname@label & & & \@author \\ \cline{4-4}
-      \date@label & & & \@date \\ \cline{4-4}
+      \authname@label & & & \MakeUppercase{\@author} \\ \cline{4-4}
+      \date@label & & & \MakeUppercase{\@date} \\ \cline{4-4}
     \end{tabular}
   \end{center}
   \vfill
@@ -1897,4 +1922,3 @@ the#1\endcsname\quad}}
 
 %% Default plain pagestyle to make all page numbers be at bottom centre 
 \pagestyle{plain}
-
