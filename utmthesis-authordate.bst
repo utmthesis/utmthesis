@@ -535,7 +535,7 @@ FUNCTION {format.note}
 FUNCTION {format.month}
 {
   month empty$
-    'skip$
+    { "" }
     { " " month * }
   if$
 }
